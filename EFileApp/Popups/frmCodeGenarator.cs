@@ -42,13 +42,15 @@ namespace EFileApp
             configs.Add("jurisdiction", createExpandoObject("jurisdiction", "jurisdiction_display", "name", "code", jurisdiction1, new string[2] { "case_category", "filer_type" }));
             configs.Add("case_category", createExpandoObject("case_category", "case_category_display", "name", "code", casecategory1, new string[3] { "case_type", "procedure_remedy", "damage_amount" }));
             configs.Add("filer_type", createExpandoObject("filer_type", "filer_type_display", "name", "code", filertype1, null));
-            configs.Add("case_type", createExpandoObject("case_type", "case_type_display", "name", "code", casetype1, new string[1] { "filing_code" }));
+            configs.Add("case_type", createExpandoObject("case_type", "case_type_display", "name", "code", casetype1, new string[2] { "caseparty_type", "filing_code" }));
             configs.Add("procedure_remedy", createExpandoObject("procedure_remedy", "procedure_remedy_display", "name", "code", remedy1, null));
             configs.Add("damage_amount", createExpandoObject("damage_amount", "damage_amount_display", "name", "code", damageamount1, null));
             configs.Add("filing_attorney", createExpandoObject("filing_attorney", "filing_attorney_display", "display_name", "id", filingattorney1, null));
             configs.Add("payment_account", createExpandoObject("payment_account", "payment_account_display", "account_name", "payment_account_id", paymentaccount1, null));
             configs.Add("filing_code", createExpandoObject("filing_code", "filing_code_display", "name", "code", filingcode1, new string[1] { "document_type"}));
             configs.Add("document_type", createExpandoObject("document_type", "document_type_display", "name", "code", filingsecurity1, null));
+            configs.Add("caseparty_type", createExpandoObject("caseparty_type", "caseparty_type_display", "name", "code", casepartytype1, null));
+            configs.Add("service_contact", createExpandoObject("service_contact", "service_contact_display", "email", "service_contact_id", contact1, null));
 
         }
         public dynamic createExpandoObject(string code, string display,  string combodisplay, string combovalue, ComboBox component, string[] dependents)
@@ -271,13 +273,13 @@ namespace EFileApp
                 {
                     api = "/payment_accounts";
 
-                } else if (type == "party_type")
+                } else if (type == "caseparty_type")
                 {
                     string jurisdiction = getDataValue("jurisdiction");
                     string case_type = getDataValue("case_type");
                     if (jurisdiction != null && case_type != null)
                     {
-                        api = "/code/party_type_codes?is_required=true&location_code=" + jurisdiction + "&case_type_code=" + case_type;
+                        api = "/code/party_type_codes?is_required=false&location_code=" + jurisdiction + "&case_type_code=" + case_type;
                     }
                 }
                 else if (type == "filing_code")
@@ -298,8 +300,10 @@ namespace EFileApp
                     {
                         api = "/code/document_type_codes?location_code=" + jurisdiction + "&filing_code=" + filing_code;
                     }
+                } else if (type == "service_contact")
+                {
+                    api = "/service_contacts";
                 }
-
                 loadComboData(config, api);
                 config.isloaded = true;
             }
@@ -440,7 +444,23 @@ namespace EFileApp
             loadData("document_type", false);
         }
 
+        //----------------------------------------------------------------------------------------------------
+        //Case Party Type
+        //----------------------------------------------------------------------------------------------------
 
+        private void casepartytype1_Click(object sender, EventArgs e)
+        {
+            loadData("caseparty_type", false);
+        }
+
+        //----------------------------------------------------------------------------------------------------
+        //Service Contacts
+        //----------------------------------------------------------------------------------------------------
+
+        private void contact1_Click(object sender, EventArgs e)
+        {
+            loadData("service_contact", false);
+        }
         //----------------------------------------------------------------------------------------------------
         //Case Parties
         //----------------------------------------------------------------------------------------------------
@@ -967,6 +987,7 @@ namespace EFileApp
                 lvFilings.Items.Add(row);
             }
         }
+
 
     }
 }

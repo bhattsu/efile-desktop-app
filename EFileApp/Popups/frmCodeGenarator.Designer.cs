@@ -207,6 +207,7 @@
             this.contact1.Name = "contact1";
             this.contact1.Size = new System.Drawing.Size(396, 21);
             this.contact1.TabIndex = 2;
+            this.contact1.Click += new System.EventHandler(this.contact1_Click);
             // 
             // button1
             // 
@@ -344,6 +345,7 @@
             this.casepartytype1.Name = "casepartytype1";
             this.casepartytype1.Size = new System.Drawing.Size(296, 21);
             this.casepartytype1.TabIndex = 1;
+            this.casepartytype1.Click += new System.EventHandler(this.casepartytype1_Click);
             // 
             // caseparties1
             // 
@@ -569,7 +571,6 @@
             this.caseparties.TabIndex = 21;
             this.caseparties.UseCompatibleStateImageBehavior = false;
             this.caseparties.View = System.Windows.Forms.View.Details;
-            //this.caseparties.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.caseparties_MouseDoubleClick);
             // 
             // partyType
             // 

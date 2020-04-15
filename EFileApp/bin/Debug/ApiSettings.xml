@@ -22,14 +22,14 @@
       <UserName>efileadmin@uslegalpro.com</UserName>
     </ApiSetting>
     <ApiSetting>
-      <State>TX-PROD</State>
-      <Token>DEMO777</Token>
-      <UserName>efileadmin@uslegalpro.com</UserName>
-    </ApiSetting>
-    <ApiSetting>
       <State>TX-STAGE</State>
       <Token>DEMO777</Token>
       <UserName>ulp.dev@mailinator.com</UserName>
+    </ApiSetting>
+    <ApiSetting>
+      <State>TX-PROD</State>
+      <Token>DEMO777</Token>
+      <UserName>efileadmin@uslegalpro.com</UserName>
     </ApiSetting>
   </ApiSettingListing>
 </ApiSettings>
