@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ApiSettingListing>
+    <ApiSetting>
+      <State>TX</State>
+      <Token>DEMO777</Token>
+      <UserName>jsmith2020@mailinator.com</UserName>
+      <Password>Love2file</Password>
+    </ApiSetting>
+    <ApiSetting>
+      <State>IL</State>
+      <Token>DEMO888</Token>
+      <UserName>jsmith2020@mailinator.com</UserName>
+      <Password>Love2file</Password>
+    </ApiSetting>
+    <ApiSetting>
+      <State>CA</State>
+      <Token>demo123</Token>
+      <UserName>naveen1203@gmail.com</UserName>
+      <Password>password</Password>
+    </ApiSetting>
+    <ApiSetting>
+      <State>TX-STAGE</State>
+      <Token>DEMO777</Token>
+      <UserName>jsmith2020@mailinator.com</UserName>
+    </ApiSetting>
+  </ApiSettingListing>
+</ApiSettings>

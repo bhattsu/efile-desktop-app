@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EFileApp.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DefaultState" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TX</Value>
+    </Setting>
+    <Setting Name="ProdApiEndPoint" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://api.uslegalpro.com/v2/</Value>
+    </Setting>
+    <Setting Name="StageApiEndPoint" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://api-stage.uslegalpro.com/v2/</Value>
+    </Setting>
+    <Setting Name="DefaultEnviornment" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Staging</Value>
+    </Setting>
+    <Setting Name="DefaultTemplateLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:/uslegalpro/bulk/templates</Value>
+    </Setting>
+    <Setting Name="DefaultTsvFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:/uslegalpro/bulk/bulk1.tsv</Value>
+    </Setting>
+    <Setting Name="LastLoginStateEnv" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultOutpuLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:/uslegalpro/bulk/stamped</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

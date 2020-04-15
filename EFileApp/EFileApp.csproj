@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9F0D314-D3F3-4B30-8999-155D4943C0CA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EFileApp</RootNamespace>
+    <AssemblyName>EFileApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MaterialSkin\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.10.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bal\BatchBL.cs" />
+    <Compile Include="Bal\EnvelopeBL.cs" />
+    <Compile Include="DTOs\CaseSearchResultDTO.cs" />
+    <Compile Include="DTOs\CreateFilingDTO.cs" />
+    <Compile Include="DTOs\EditCasePartyDTO.cs" />
+    <Compile Include="DTOs\OptionalServiceDTO.cs" />
+    <Compile Include="frmAddCaseparty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCaseparty.Designer.cs">
+      <DependentUpon>frmAddCaseparty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddTemplate.Designer.cs">
+      <DependentUpon>frmAddTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBatches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBatches.Designer.cs">
+      <DependentUpon>frmBatches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateBatch.Designer.cs">
+      <DependentUpon>frmCreateBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddBatch.Designer.cs">
+      <DependentUpon>frmAddBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDownloadBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDownloadBatch.Designer.cs">
+      <DependentUpon>frmDownloadBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnvelope.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnvelope.Designer.cs">
+      <DependentUpon>frmEnvelope.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPayload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayload.Designer.cs">
+      <DependentUpon>frmPayload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettngs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettngs.Designer.cs">
+      <DependentUpon>frmSettngs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\APICall.cs" />
+    <Compile Include="Helper\AppConstants.cs" />
+    <Compile Include="Helper\HelperMethods.cs" />
+    <Compile Include="Helper\LogManager.cs" />
+    <Compile Include="Models\ApiSettings.cs" />
+    <Compile Include="Models\ApiSettingsList.cs" />
+    <Compile Include="Popups\frmAddFiling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\frmAddFiling.Designer.cs">
+      <DependentUpon>frmAddFiling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\frmAddOptionalService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\frmAddOptionalService.Designer.cs">
+      <DependentUpon>frmAddOptionalService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\frmCodeGenarator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\frmCodeGenarator.Designer.cs">
+      <DependentUpon>frmCodeGenarator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\frmEditCaseParty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\frmEditCaseParty.Designer.cs">
+      <DependentUpon>frmEditCaseParty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\frmPickFromSearchResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\frmPickFromSearchResult.Designer.cs">
+      <DependentUpon>frmPickFromSearchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\frmPleaseWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\frmPleaseWait.Designer.cs">
+      <DependentUpon>frmPleaseWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddCaseparty.resx">
+      <DependentUpon>frmAddCaseparty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddTemplate.resx">
+      <DependentUpon>frmAddTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBatches.resx">
+      <DependentUpon>frmBatches.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateBatch.resx">
+      <DependentUpon>frmCreateBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddBatch.resx">
+      <DependentUpon>frmAddBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDownloadBatch.resx">
+      <DependentUpon>frmDownloadBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnvelope.resx">
+      <DependentUpon>frmEnvelope.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayload.resx">
+      <DependentUpon>frmPayload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettngs.resx">
+      <DependentUpon>frmSettngs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\frmAddFiling.resx">
+      <DependentUpon>frmAddFiling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\frmAddOptionalService.resx">
+      <DependentUpon>frmAddOptionalService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\frmCodeGenarator.resx">
+      <DependentUpon>frmCodeGenarator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\frmEditCaseParty.resx">
+      <DependentUpon>frmEditCaseParty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\frmPickFromSearchResult.resx">
+      <DependentUpon>frmPickFromSearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\frmPleaseWait.resx">
+      <DependentUpon>frmPleaseWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\batch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\batchold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\exit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batch.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\download2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\list2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\backgound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <None Include="Resources\Rolling-1s-31px %281%29.gif" />
+    <None Include="Resources\Rolling-1s-31px.gif" />
+    <None Include="Resources\imgAddTo.Image.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

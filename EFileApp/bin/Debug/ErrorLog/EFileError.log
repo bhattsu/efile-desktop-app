@@ -1,0 +1,669 @@
+ERROR [03 Apr 11:59:31][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at CallSite.Target(Closure , CallSite , Object , String )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 12:00:17][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at CallSite.Target(Closure , CallSite , Object , String )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at EFileApp.frmBatches.LoadBatches(Int32 firstBatch, Int32 limit) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 457
+   at EFileApp.frmBatches.frmBatches_Load(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 37
+ERROR [03 Apr 12:00:35][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at CallSite.Target(Closure , CallSite , Object , String )
+   at EFileApp.frmBatches.LoadBatches(Int32 firstBatch, Int32 limit) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 457
+   at EFileApp.frmBatches.btnRefresh_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 194
+ERROR [03 Apr 12:02:59][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at CallSite.Target(Closure , CallSite , Object , String )
+   at EFileApp.frmBatches.LoadBatches(Int32 firstBatch, Int32 limit) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 457
+   at EFileApp.frmBatches.btnRefresh_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 194
+ERROR [03 Apr 12:04:42][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at CallSite.Target(Closure , CallSite , Object , String )
+   at EFileApp.frmBatches.LoadBatches(Int32 firstBatch, Int32 limit) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 457
+   at EFileApp.frmBatches.btnRefresh_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 194
+ERROR [03 Apr 12:05:21][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at CallSite.Target(Closure , CallSite , Object , String )
+   at EFileApp.frmBatches.LoadBatches(Int32 firstBatch, Int32 limit) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 457
+   at EFileApp.frmBatches.btnRefresh_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 194
+ERROR [03 Apr 12:07:26][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at CallSite.Target(Closure , CallSite , Object , String )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at EFileApp.Helper.APICall.BatchExists(String batchid) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 203
+   at EFileApp.frmCreateBatch.btnCreate_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmCreateBatch.cs:line 66
+ERROR [03 Apr 12:08:14][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at CallSite.Target(Closure , CallSite , Object , String )
+   at EFileApp.Helper.APICall.BatchExists(String batchid) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 203
+   at EFileApp.frmCreateBatch.btnCreate_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmCreateBatch.cs:line 66
+ERROR [03 Apr 12:08:27][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at CallSite.Target(Closure , CallSite , Object , String )
+   at EFileApp.Helper.APICall.BatchExists(String batchid) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 203
+   at EFileApp.frmCreateBatch.btnCreate_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmCreateBatch.cs:line 66
+ERROR [03 Apr 12:10:42][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Could not find a part of the path 'c:\uslegalpro\bulk\templates\FL'.
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'c:\uslegalpro\bulk\templates\FL'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFileSystemEntries(String path, String searchPattern, SearchOption searchOption)
+   at EFileApp.Bal.BatchBL.InitiTemplates(String path) in c:\uslegalpro\bulk\src\EFileApp\Bal\BatchBL.cs:line 101
+   at EFileApp.frmSettngs.LoadTeamplateFiles() in c:\uslegalpro\bulk\src\EFileApp\frmSettngs.cs:line 151
+   at EFileApp.frmSettngs.LoadSettings() in c:\uslegalpro\bulk\src\EFileApp\frmSettngs.cs:line 67
+   at EFileApp.frmSettngs.frmSettngs_Load(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmSettngs.cs:line 38
+ERROR [03 Apr 12:31:33][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Cannot perform runtime binding on a null reference
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at EFileApp.frmEnvelope.LoadFilings(String envelopeId) in c:\uslegalpro\bulk\src\EFileApp\frmEnvelope.cs:line 355
+   at EFileApp.frmEnvelope.dgEnvelope_SelectionChanged(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmEnvelope.cs:line 176
+ERROR [03 Apr 12:34:24][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at CallSite.Target(Closure , CallSite , Object , String )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at EFileApp.Bal.EnvelopeBL.DownloadEnvelope(String envelopeid, String downloadfolder) in c:\uslegalpro\bulk\src\EFileApp\Bal\EnvelopeBL.cs:line 97
+   at EFileApp.frmEnvelope.dgEnvelope_CellContentClick(Object sender, DataGridViewCellEventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmEnvelope.cs:line 146
+ERROR [03 Apr 12:51:16][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 14:35:36][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 14:35:41][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 14:35:46][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 14:35:50][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 14:46:08][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 14:46:14][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 14:46:19][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 15:23:02][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 15:23:20][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 15:28:33][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at CallSite.Target(Closure , CallSite , Object , String )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 18:19:29][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 23:19:21][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 23:19:41][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [03 Apr 23:19:47][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 08:58:28][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 09:05:51][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 09:47:57][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 69
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 11:35:46][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 11:35:54][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 11:37:01][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 11:37:48][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 12:00:36][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 12:05:36][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 13:12:23][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 13:17:29][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 13:23:08][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 13:24:33][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 13:32:24][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 13:38:34][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Unable to refresh batch.
+System.Exception: Unable to refresh batch.
+   at EFileApp.Helper.APICall.refreshBatch(String batchId) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 310
+   at EFileApp.Bal.BatchBL.refreshBatch(String batchid) in c:\uslegalpro\bulk\src\EFileApp\Bal\BatchBL.cs:line 149
+   at EFileApp.frmEnvelope.refreshEnvelope_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmEnvelope.cs:line 368
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at EFileApp.frmBatches.ShowBatch(String batchId, String createdDate) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 528
+ERROR [04 Apr 13:38:57][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Unable to refresh batch.
+System.Exception: Unable to refresh batch.
+   at EFileApp.Helper.APICall.refreshBatch(String batchId) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 310
+   at EFileApp.Bal.BatchBL.refreshBatch(String batchid) in c:\uslegalpro\bulk\src\EFileApp\Bal\BatchBL.cs:line 149
+   at EFileApp.frmEnvelope.refreshEnvelope_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmEnvelope.cs:line 368
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at EFileApp.frmBatches.ShowBatch(String batchId, String createdDate) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 528
+ERROR [04 Apr 13:45:07][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Unable to refresh batch.
+System.Exception: Unable to refresh batch.
+   at EFileApp.Helper.APICall.refreshBatch(String batchId) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 310
+   at EFileApp.Bal.BatchBL.refreshBatch(String batchid) in c:\uslegalpro\bulk\src\EFileApp\Bal\BatchBL.cs:line 149
+   at EFileApp.frmEnvelope.refreshEnvelope_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmEnvelope.cs:line 368
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at EFileApp.frmBatches.ShowBatch(String batchId, String createdDate) in c:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 528
+ERROR [04 Apr 13:54:56][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 14:36:41][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 15:43:42][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 15:49:13][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 15:57:50][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 16:01:52][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 16:10:07][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 16:16:34][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 16:49:19][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 16:49:24][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 18:34:08][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 18:34:23][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 18:50:13][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 19:51:35][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [04 Apr 19:51:37][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 00:11:27][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in c:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in c:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 00:22:55][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 00:34:21][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 00:57:52][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 09:48:50][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 10:09:54][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 11:18:17][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 14:00:49][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 14:32:28][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 15:11:56][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 15:11:59][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 16:20:59][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 16:34:15][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [05 Apr 19:01:40][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The process cannot access the file 'C:\uslegalpro\bulk\tx-bulk.tsv' because it is being used by another process.
+System.IO.IOException: The process cannot access the file 'C:\uslegalpro\bulk\tx-bulk.tsv' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   at System.IO.File.ReadAllText(String path)
+   at EFileApp.Bal.BatchBL.ParseXSVFile(String datapath) in C:\uslegalpro\bulk\src\EFileApp\Bal\BatchBL.cs:line 65
+   at EFileApp.frmAddBatch.LoadCases() in C:\uslegalpro\bulk\src\EFileApp\frmAddBatch.cs:line 376
+   at EFileApp.frmAddBatch.btnSelectTsvLocation_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmAddBatch.cs:line 160
+ERROR [05 Apr 19:01:46][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at EFileApp.frmAddBatch.LoadCases() in C:\uslegalpro\bulk\src\EFileApp\frmAddBatch.cs:line 376
+   at EFileApp.frmAddBatch.btnSelectTsvLocation_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmAddBatch.cs:line 160
+ERROR [05 Apr 19:04:04][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at EFileApp.frmAddBatch.dgCases_CellContentClick(Object sender, DataGridViewCellEventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmAddBatch.cs:line 454
+ERROR [06 Apr 16:08:40][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [06 Apr 17:27:15][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [06 Apr 17:41:21][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [06 Apr 17:51:16][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [06 Apr 22:30:31][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EFileApp.frmPayload..ctor() in C:\uslegalpro\bulk\src\EFileApp\frmPayload.cs:line 22
+   at EFileApp.frmAddBatch.dgCases_CellContentClick(Object sender, DataGridViewCellEventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmAddBatch.cs:line 487
+ERROR [07 Apr 16:18:22][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [07 Apr 16:24:07][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Listbatches(Int32 startBatch, Int32 limit, String searchString) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 215
+   at EFileApp.frmBatches.LoadBatches(Int32 firstBatch, Int32 limit) in C:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 457
+   at EFileApp.frmBatches.frmBatches_Load(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmBatches.cs:line 37
+ERROR [07 Apr 16:34:35][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [07 Apr 17:43:22][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [07 Apr 19:11:06][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [08 Apr 01:02:31][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [08 Apr 01:04:03][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [08 Apr 12:09:08][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Authenticate(String clientoken, String username, String password) in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 71
+   at EFileApp.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [09 Apr 01:36:25][EFileApp.Helper.LogManager.LogError(C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__11.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\frmLogin.cs:line 71
+ERROR [09 Apr 19:49:55][EFileApp.Helper.LogManager.LogError(C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__11.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\frmLogin.cs:line 71
+ERROR [09 Apr 19:49:57][EFileApp.Helper.LogManager.LogError(C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__11.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\frmLogin.cs:line 71
+ERROR [09 Apr 19:50:02][EFileApp.Helper.LogManager.LogError(C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__11.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\frmLogin.cs:line 71
+ERROR [09 Apr 19:50:04][EFileApp.Helper.LogManager.LogError(C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__11.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\frmLogin.cs:line 71
+ERROR [09 Apr 19:50:12][EFileApp.Helper.LogManager.LogError(C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__11.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\frmLogin.cs:line 71
+ERROR [09 Apr 19:50:31][EFileApp.Helper.LogManager.LogError(C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__11.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\frmLogin.cs:line 71
+ERROR [09 Apr 19:51:27][EFileApp.Helper.LogManager.LogError(C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__11.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\frmLogin.cs:line 71
+ERROR [09 Apr 21:22:11][EFileApp.Helper.LogManager.LogError(C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__11.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\frmLogin.cs:line 71
+ERROR [10 Apr 01:44:51][EFileApp.Helper.LogManager.LogError(C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__11.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\frmLogin.cs:line 71
+ERROR [10 Apr 01:44:58][EFileApp.Helper.LogManager.LogError(C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__11.MoveNext() in C:\Users\cetin\Desktop\EFileApp\EFileApp\frmLogin.cs:line 71
+ERROR [13 Apr 09:03:39][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- HTTP transport error: java.net.UnknownHostException: efspstage.efiletexas.gov
+System.Exception: HTTP transport error: java.net.UnknownHostException: efspstage.efiletexas.gov
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__11.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 73
+ERROR [14 Apr 15:14:00][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [14 Apr 16:39:23][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [14 Apr 16:47:01][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [14 Apr 16:53:17][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [14 Apr 17:38:31][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [14 Apr 17:41:46][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [14 Apr 17:41:49][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [14 Apr 18:24:07][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [14 Apr 18:25:13][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [14 Apr 18:28:18][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
+ERROR [14 Apr 19:00:32][EFileApp.Helper.LogManager.LogError(C:\uslegalpro\bulk\src\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in C:\uslegalpro\bulk\src\EFileApp\frmLogin.cs:line 68
