@@ -34,12 +34,12 @@
             this.previewtemplate1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.contactparties1 = new System.Windows.Forms.CheckedListBox();
             this.contact1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addservicecontact1 = new System.Windows.Forms.Button();
             this.servicecontact1 = new System.Windows.Forms.DataGridView();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filler1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.filings1 = new System.Windows.Forms.DataGridView();
             this.filing1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +52,14 @@
             this.casepartytype1 = new System.Windows.Forms.ComboBox();
             this.caseparties1 = new System.Windows.Forms.DataGridView();
             this.partytype1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firtname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middlename = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.city = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filler = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentaccount1 = new System.Windows.Forms.ComboBox();
             this.filertype1 = new System.Windows.Forms.ComboBox();
             this.filingattorney1 = new System.Windows.Forms.ComboBox();
@@ -123,7 +131,7 @@
             this.tabControl1.Location = new System.Drawing.Point(18, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(879, 755);
+            this.tabControl1.Size = new System.Drawing.Size(1152, 755);
             this.tabControl1.TabIndex = 23;
             // 
             // tabPage3
@@ -146,7 +154,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(871, 729);
+            this.tabPage3.Size = new System.Drawing.Size(1144, 729);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Remedy";
             // 
@@ -162,7 +170,7 @@
             // 
             // previewtemplate1
             // 
-            this.previewtemplate1.Location = new System.Drawing.Point(663, 686);
+            this.previewtemplate1.Location = new System.Drawing.Point(938, 686);
             this.previewtemplate1.Name = "previewtemplate1";
             this.previewtemplate1.Size = new System.Drawing.Size(103, 23);
             this.previewtemplate1.TabIndex = 68;
@@ -172,7 +180,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(785, 686);
+            this.button2.Location = new System.Drawing.Point(1057, 686);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 67;
@@ -181,24 +189,15 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.contactparties1);
             this.groupBox3.Controls.Add(this.contact1);
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.addservicecontact1);
             this.groupBox3.Controls.Add(this.servicecontact1);
             this.groupBox3.Location = new System.Drawing.Point(6, 510);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(854, 148);
+            this.groupBox3.Size = new System.Drawing.Size(1132, 148);
             this.groupBox3.TabIndex = 66;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Service Contacts";
-            // 
-            // contactparties1
-            // 
-            this.contactparties1.FormattingEnabled = true;
-            this.contactparties1.Location = new System.Drawing.Point(431, 19);
-            this.contactparties1.Name = "contactparties1";
-            this.contactparties1.Size = new System.Drawing.Size(329, 19);
-            this.contactparties1.TabIndex = 3;
             // 
             // contact1
             // 
@@ -209,29 +208,32 @@
             this.contact1.TabIndex = 2;
             this.contact1.Click += new System.EventHandler(this.contact1_Click);
             // 
-            // button1
+            // addservicecontact1
             // 
-            this.button1.Location = new System.Drawing.Point(766, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addservicecontact1.Location = new System.Drawing.Point(409, 18);
+            this.addservicecontact1.Name = "addservicecontact1";
+            this.addservicecontact1.Size = new System.Drawing.Size(75, 23);
+            this.addservicecontact1.TabIndex = 1;
+            this.addservicecontact1.Text = "Add";
+            this.addservicecontact1.UseVisualStyleBackColor = true;
+            this.addservicecontact1.Click += new System.EventHandler(this.addservicecontact1_Click);
             // 
             // servicecontact1
             // 
             this.servicecontact1.AllowUserToAddRows = false;
             this.servicecontact1.AllowUserToDeleteRows = false;
+            this.servicecontact1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.servicecontact1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.servicecontact1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.servicecontact1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.servicecontact1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.email,
-            this.name});
+            this.name,
+            this.filler1});
             this.servicecontact1.Location = new System.Drawing.Point(6, 50);
             this.servicecontact1.Name = "servicecontact1";
             this.servicecontact1.ReadOnly = true;
-            this.servicecontact1.Size = new System.Drawing.Size(835, 92);
+            this.servicecontact1.Size = new System.Drawing.Size(1120, 92);
             this.servicecontact1.TabIndex = 0;
             // 
             // email
@@ -239,12 +241,21 @@
             this.email.HeaderText = "Email";
             this.email.Name = "email";
             this.email.ReadOnly = true;
+            this.email.Width = 57;
             // 
             // name
             // 
             this.name.HeaderText = "Name";
             this.name.Name = "name";
             this.name.ReadOnly = true;
+            this.name.Width = 60;
+            // 
+            // filler1
+            // 
+            this.filler1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.filler1.HeaderText = "";
+            this.filler1.Name = "filler1";
+            this.filler1.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -254,7 +265,7 @@
             this.groupBox2.Controls.Add(this.filingcode1);
             this.groupBox2.Location = new System.Drawing.Point(6, 362);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(854, 142);
+            this.groupBox2.Size = new System.Drawing.Size(1132, 142);
             this.groupBox2.TabIndex = 65;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filings";
@@ -272,7 +283,7 @@
             this.filings1.Location = new System.Drawing.Point(7, 47);
             this.filings1.Name = "filings1";
             this.filings1.ReadOnly = true;
-            this.filings1.Size = new System.Drawing.Size(835, 89);
+            this.filings1.Size = new System.Drawing.Size(1119, 89);
             this.filings1.TabIndex = 4;
             // 
             // filing1
@@ -323,7 +334,7 @@
             this.groupBox1.Controls.Add(this.caseparties1);
             this.groupBox1.Location = new System.Drawing.Point(6, 196);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(854, 160);
+            this.groupBox1.Size = new System.Drawing.Size(1132, 160);
             this.groupBox1.TabIndex = 64;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Case Parties";
@@ -351,22 +362,88 @@
             // 
             this.caseparties1.AllowUserToAddRows = false;
             this.caseparties1.AllowUserToDeleteRows = false;
+            this.caseparties1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.caseparties1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.caseparties1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.caseparties1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.caseparties1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.partytype1});
+            this.partytype1,
+            this.firtname,
+            this.middlename,
+            this.lastname,
+            this.address1,
+            this.city,
+            this.state,
+            this.zip,
+            this.filler});
             this.caseparties1.Location = new System.Drawing.Point(6, 49);
             this.caseparties1.Name = "caseparties1";
-            this.caseparties1.ReadOnly = true;
-            this.caseparties1.Size = new System.Drawing.Size(842, 99);
+            this.caseparties1.Size = new System.Drawing.Size(1120, 99);
             this.caseparties1.TabIndex = 0;
             // 
             // partytype1
             // 
             this.partytype1.HeaderText = "Party Type";
+            this.partytype1.MinimumWidth = 2;
             this.partytype1.Name = "partytype1";
             this.partytype1.ReadOnly = true;
+            this.partytype1.Width = 83;
+            // 
+            // firtname
+            // 
+            this.firtname.HeaderText = "First Name";
+            this.firtname.Name = "firtname";
+            this.firtname.ReadOnly = true;
+            this.firtname.Width = 82;
+            // 
+            // middlename
+            // 
+            this.middlename.HeaderText = "Middle Name";
+            this.middlename.Name = "middlename";
+            this.middlename.ReadOnly = true;
+            this.middlename.Width = 94;
+            // 
+            // lastname
+            // 
+            this.lastname.HeaderText = "Last Name";
+            this.lastname.Name = "lastname";
+            this.lastname.ReadOnly = true;
+            this.lastname.Width = 83;
+            // 
+            // address1
+            // 
+            this.address1.HeaderText = "Address1";
+            this.address1.Name = "address1";
+            this.address1.ReadOnly = true;
+            this.address1.Width = 76;
+            // 
+            // city
+            // 
+            this.city.HeaderText = "City";
+            this.city.Name = "city";
+            this.city.ReadOnly = true;
+            this.city.Width = 49;
+            // 
+            // state
+            // 
+            this.state.HeaderText = "State";
+            this.state.Name = "state";
+            this.state.ReadOnly = true;
+            this.state.Width = 57;
+            // 
+            // zip
+            // 
+            this.zip.HeaderText = "Zip";
+            this.zip.Name = "zip";
+            this.zip.ReadOnly = true;
+            this.zip.Width = 47;
+            // 
+            // filler
+            // 
+            this.filler.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.filler.HeaderText = "";
+            this.filler.Name = "filler";
+            this.filler.ReadOnly = true;
             // 
             // paymentaccount1
             // 
@@ -459,7 +536,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(871, 729);
+            this.tabPage4.Size = new System.Drawing.Size(1144, 729);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Case Parties";
             // 
@@ -626,7 +703,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(871, 729);
+            this.tabPage5.Size = new System.Drawing.Size(1144, 729);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Filings";
             // 
@@ -737,7 +814,7 @@
             this.tpServiceContacts.Location = new System.Drawing.Point(4, 22);
             this.tpServiceContacts.Name = "tpServiceContacts";
             this.tpServiceContacts.Padding = new System.Windows.Forms.Padding(3);
-            this.tpServiceContacts.Size = new System.Drawing.Size(871, 729);
+            this.tpServiceContacts.Size = new System.Drawing.Size(1144, 729);
             this.tpServiceContacts.TabIndex = 3;
             this.tpServiceContacts.Text = "Service Contacts";
             this.tpServiceContacts.UseVisualStyleBackColor = true;
@@ -757,7 +834,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(871, 729);
+            this.tabPage7.Size = new System.Drawing.Size(1144, 729);
             this.tabPage7.TabIndex = 4;
             this.tabPage7.Text = "Misc";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -856,7 +933,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 779);
+            this.ClientSize = new System.Drawing.Size(1182, 779);
             this.Controls.Add(this.tabControl1);
             this.MinimumSize = new System.Drawing.Size(300, 200);
             this.Name = "frmCodeGenarator";
@@ -939,7 +1016,6 @@
         private System.Windows.Forms.DataGridView caseparties1;
         private System.Windows.Forms.Button addcaseparty1;
         private System.Windows.Forms.ComboBox casepartytype1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn partytype1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox filingcode1;
         private System.Windows.Forms.ComboBox filingsecurity1;
@@ -949,13 +1025,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn security1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView servicecontact1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.CheckedListBox contactparties1;
         private System.Windows.Forms.ComboBox contact1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addservicecontact1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button previewtemplate1;
         private System.Windows.Forms.ComboBox template1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn partytype1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firtname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn middlename;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn city;
+        private System.Windows.Forms.DataGridViewTextBoxColumn state;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zip;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filler;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filler1;
     }
 }

@@ -34,6 +34,7 @@ namespace EFileApp
             data.Add(new JProperty("batch_id", "${batch_id}"));
             data.Add(new JProperty("reference_id", "${reference_id}"));
             data.Add(new JProperty("case_parties", new JArray()));
+            data.Add(new JProperty("service_contacts", new JArray()));
             data.Add(new JProperty("filings", new JArray()));
             payload.Add(new JProperty("data", data));
 
@@ -465,6 +466,53 @@ namespace EFileApp
         //Case Parties
         //----------------------------------------------------------------------------------------------------
 
+        private void addcaseparty1_Click(object sender, EventArgs e)
+        {
+            dynamic item = casepartytype1.SelectedItem;
+            if (item != null)
+            {
+                JObject obj = new JObject();
+                obj.Add(new JProperty("name", item.name));
+                obj.Add(new JProperty("code", item.code));
+                addCasePartyToPayload(obj);
+                reloadCasePartyTable();
+            }
+        }
+
+        public void addCasePartyToPayload(dynamic item)
+        {
+            string name = item["name"];
+            string code = item["code"];
+
+            JObject caseparty = new JObject();
+            caseparty.Add(new JProperty("type", code));
+            caseparty.Add(new JProperty("type_display", name));
+            caseparty.Add(new JProperty("identifcation_object", "Party_" + generateUID()));
+
+            JObject data = (JObject)payload.GetValue("data");
+            JArray case_parties = (JArray)data.GetValue("case_parties");
+            case_parties.Add(caseparty);
+        }
+
+
+        public void reloadCasePartyTable()
+        {
+            caseparties1.Rows.Clear();
+            JObject data = (JObject)payload.GetValue("data");
+            JArray case_parties = (JArray)data.GetValue("case_parties");
+            foreach (JObject case_party in case_parties)
+            {
+                caseparties1.Rows.Add(new[] {
+                    case_party.GetValue("type_display"),
+                    "test",
+                    case_party.GetValue("middle_name"),
+                    case_party.GetValue("last_name")
+                });
+            }
+        }
+
+
+
         private void loadcasepartytypeandparties()
         {
             string jurisdiction = getDataValue("jurisdiction");
@@ -501,50 +549,6 @@ namespace EFileApp
             }
 
             reloadCasePartyTable();
-        }
-
-        public void addCasePartyToPayload(dynamic item)
-        {
-            string name = item["name"];
-            string code = item["code"];
-
-            JObject caseparty = new JObject();
-            caseparty.Add(new JProperty("type", code));
-            caseparty.Add(new JProperty("type_display", name));
-            caseparty.Add(new JProperty("identifcation_object", "Party_"+ generateUID()));
-            
-            JObject data = (JObject)payload.GetValue("data");
-            JArray case_parties = (JArray)data.GetValue("case_parties");
-            case_parties.Add(caseparty);
-        }
-
-
-        public void reloadCasePartyTable()
-        {
-            caseparties1.Rows.Clear();
-            JObject data = (JObject)payload.GetValue("data");
-            JArray case_parties = (JArray)data.GetValue("case_parties");
-            foreach(JObject case_party in case_parties)
-            {
-                caseparties1.Rows.Add(new[] { 
-                    case_party.GetValue("type_display") 
-                });
-            }
-        }
-
-        private void addcaseparty1_Click(object sender, EventArgs e)
-        {
-            dynamic item = casepartytype1.SelectedItem;
-            if (item != null)
-            {
-                JObject obj = new JObject();
-                obj.Add(new JProperty("name", item.name));
-                obj.Add(new JProperty("code", item.code));
-
-                addCasePartyToPayload(obj);
-                reloadCasePartyTable();
-                //MessageBox.Show(payload.ToString());
-            }
         }
 
 
@@ -621,14 +625,56 @@ namespace EFileApp
         }
 
 
+        //----------------------------------------------------------------------------------------------------
+        //Filing code
+        //----------------------------------------------------------------------------------------------------
+
+        private void addservicecontact1_Click(object sender, EventArgs e)
+        {
+            dynamic item = contact1.SelectedItem;
+            if (item != null)
+            {
+                JObject obj = new JObject();
+                obj.Add(new JProperty("name", item.name));
+                obj.Add(new JProperty("code", item.code));
+                addServiceContactToPayload(obj);
+                reloadServiceContactsTable();
+            }
+        }
+
+        public void addServiceContactToPayload(dynamic item)
+        {
+            string name = item["name"];
+            string code = item["code"];
+
+            JObject caseparty = new JObject();
+            caseparty.Add(new JProperty("id", code));
+            caseparty.Add(new JProperty("email", name));
+
+            JObject data = (JObject)payload.GetValue("data");
+            JArray case_parties = (JArray)data.GetValue("service_contacts");
+            case_parties.Add(caseparty);
+        }
+
+        public void reloadServiceContactsTable()
+        {
+            filings1.Rows.Clear();
+            JObject data = (JObject)payload.GetValue("data");
+            JArray service_contacts = (JArray)data.GetValue("service_contacts");
+            foreach (JObject service_contact in service_contacts)
+            {
+                servicecontact1.Rows.Add(new[] {
+                    service_contact.GetValue("email")
+                });
+            }
+        }
+
 
         private void previewtemplate1_Click(object sender, EventArgs e)
         {
             frmPayload pa = new frmPayload(payload);
             pa.Show();
         }
-
-
         //----------------------------------------------------------------------------------------------------
         // Below this is old code - just use as a reference
         //----------------------------------------------------------------------------------------------------
