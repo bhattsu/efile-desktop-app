@@ -51,15 +51,6 @@
             this.addcaseparty1 = new System.Windows.Forms.Button();
             this.casepartytype1 = new System.Windows.Forms.ComboBox();
             this.caseparties1 = new System.Windows.Forms.DataGridView();
-            this.partytype1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firtname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.middlename = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.city = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filler = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentaccount1 = new System.Windows.Forms.ComboBox();
             this.filertype1 = new System.Windows.Forms.ComboBox();
             this.filingattorney1 = new System.Windows.Forms.ComboBox();
@@ -105,6 +96,15 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.partytype1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firtname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middlename = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.city = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filler = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -315,6 +315,7 @@
             this.filingsecurity1.Name = "filingsecurity1";
             this.filingsecurity1.Size = new System.Drawing.Size(312, 21);
             this.filingsecurity1.TabIndex = 1;
+            //this.filingsecurity1.SelectedIndexChanged += new System.EventHandler(this.filingsecurity1_SelectedIndexChanged);
             this.filingsecurity1.Click += new System.EventHandler(this.filingsecurity1_Click);
             // 
             // filingcode1
@@ -380,70 +381,6 @@
             this.caseparties1.Name = "caseparties1";
             this.caseparties1.Size = new System.Drawing.Size(1120, 99);
             this.caseparties1.TabIndex = 0;
-            // 
-            // partytype1
-            // 
-            this.partytype1.HeaderText = "Party Type";
-            this.partytype1.MinimumWidth = 2;
-            this.partytype1.Name = "partytype1";
-            this.partytype1.ReadOnly = true;
-            this.partytype1.Width = 83;
-            // 
-            // firtname
-            // 
-            this.firtname.HeaderText = "First Name";
-            this.firtname.Name = "firtname";
-            this.firtname.ReadOnly = true;
-            this.firtname.Width = 82;
-            // 
-            // middlename
-            // 
-            this.middlename.HeaderText = "Middle Name";
-            this.middlename.Name = "middlename";
-            this.middlename.ReadOnly = true;
-            this.middlename.Width = 94;
-            // 
-            // lastname
-            // 
-            this.lastname.HeaderText = "Last Name";
-            this.lastname.Name = "lastname";
-            this.lastname.ReadOnly = true;
-            this.lastname.Width = 83;
-            // 
-            // address1
-            // 
-            this.address1.HeaderText = "Address1";
-            this.address1.Name = "address1";
-            this.address1.ReadOnly = true;
-            this.address1.Width = 76;
-            // 
-            // city
-            // 
-            this.city.HeaderText = "City";
-            this.city.Name = "city";
-            this.city.ReadOnly = true;
-            this.city.Width = 49;
-            // 
-            // state
-            // 
-            this.state.HeaderText = "State";
-            this.state.Name = "state";
-            this.state.ReadOnly = true;
-            this.state.Width = 57;
-            // 
-            // zip
-            // 
-            this.zip.HeaderText = "Zip";
-            this.zip.Name = "zip";
-            this.zip.ReadOnly = true;
-            this.zip.Width = 47;
-            // 
-            // filler
-            // 
-            this.filler.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.filler.HeaderText = "";
-            this.filler.Name = "filler";
-            this.filler.ReadOnly = true;
             // 
             // paymentaccount1
             // 
@@ -929,6 +866,74 @@
             this.comboBox2.Size = new System.Drawing.Size(291, 21);
             this.comboBox2.TabIndex = 0;
             // 
+            // partytype1
+            // 
+            this.partytype1.HeaderText = "Party Type";
+            this.partytype1.MinimumWidth = 150;
+            this.partytype1.Name = "partytype1";
+            this.partytype1.ReadOnly = true;
+            this.partytype1.Width = 150;
+            // 
+            // firtname
+            // 
+            this.firtname.HeaderText = "First Name";
+            this.firtname.MinimumWidth = 150;
+            this.firtname.Name = "firtname";
+            this.firtname.ReadOnly = true;
+            this.firtname.Width = 150;
+            // 
+            // middlename
+            // 
+            this.middlename.HeaderText = "Middle Name";
+            this.middlename.MinimumWidth = 150;
+            this.middlename.Name = "middlename";
+            this.middlename.ReadOnly = true;
+            this.middlename.Width = 150;
+            // 
+            // lastname
+            // 
+            this.lastname.HeaderText = "Last Name";
+            this.lastname.MinimumWidth = 150;
+            this.lastname.Name = "lastname";
+            this.lastname.ReadOnly = true;
+            this.lastname.Width = 150;
+            // 
+            // address1
+            // 
+            this.address1.HeaderText = "Address1";
+            this.address1.MinimumWidth = 150;
+            this.address1.Name = "address1";
+            this.address1.ReadOnly = true;
+            this.address1.Width = 150;
+            // 
+            // city
+            // 
+            this.city.HeaderText = "City";
+            this.city.Name = "city";
+            this.city.ReadOnly = true;
+            this.city.Width = 49;
+            // 
+            // state
+            // 
+            this.state.HeaderText = "State";
+            this.state.Name = "state";
+            this.state.ReadOnly = true;
+            this.state.Width = 57;
+            // 
+            // zip
+            // 
+            this.zip.HeaderText = "Zip";
+            this.zip.Name = "zip";
+            this.zip.ReadOnly = true;
+            this.zip.Width = 47;
+            // 
+            // filler
+            // 
+            this.filler.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.filler.HeaderText = "";
+            this.filler.Name = "filler";
+            this.filler.ReadOnly = true;
+            // 
             // frmCodeGenarator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1030,6 +1035,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button previewtemplate1;
         private System.Windows.Forms.ComboBox template1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filler1;
         private System.Windows.Forms.DataGridViewTextBoxColumn partytype1;
         private System.Windows.Forms.DataGridViewTextBoxColumn firtname;
         private System.Windows.Forms.DataGridViewTextBoxColumn middlename;
@@ -1039,8 +1047,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn state;
         private System.Windows.Forms.DataGridViewTextBoxColumn zip;
         private System.Windows.Forms.DataGridViewTextBoxColumn filler;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn filler1;
     }
 }

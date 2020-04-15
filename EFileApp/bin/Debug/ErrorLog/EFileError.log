@@ -675,3 +675,27 @@ System.Exception: Authentication failed, invalid/expired authentication token or
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\frmLogin.cs:line 68
+ERROR [15 Apr 09:41:35][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\efile-desktop-app\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\frmLogin.cs:line 68
+ERROR [15 Apr 09:41:39][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\efile-desktop-app\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\frmLogin.cs:line 68
+ERROR [15 Apr 09:41:48][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\efile-desktop-app\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\frmLogin.cs:line 68

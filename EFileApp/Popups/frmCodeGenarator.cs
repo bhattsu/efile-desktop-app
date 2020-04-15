@@ -11,6 +11,7 @@ using System.Data;
 using System.Dynamic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,21 +41,24 @@ namespace EFileApp
 
             configs = new Dictionary<string, object>();
 
-            configs.Add("jurisdiction", createExpandoObject("jurisdiction", "jurisdiction_display", "name", "code", jurisdiction1, new string[2] { "case_category", "filer_type" }));
-            configs.Add("case_category", createExpandoObject("case_category", "case_category_display", "name", "code", casecategory1, new string[3] { "case_type", "procedure_remedy", "damage_amount" }));
-            configs.Add("filer_type", createExpandoObject("filer_type", "filer_type_display", "name", "code", filertype1, null));
-            configs.Add("case_type", createExpandoObject("case_type", "case_type_display", "name", "code", casetype1, new string[2] { "caseparty_type", "filing_code" }));
-            configs.Add("procedure_remedy", createExpandoObject("procedure_remedy", "procedure_remedy_display", "name", "code", remedy1, null));
-            configs.Add("damage_amount", createExpandoObject("damage_amount", "damage_amount_display", "name", "code", damageamount1, null));
-            configs.Add("filing_attorney", createExpandoObject("filing_attorney", "filing_attorney_display", "display_name", "id", filingattorney1, null));
-            configs.Add("payment_account", createExpandoObject("payment_account", "payment_account_display", "account_name", "payment_account_id", paymentaccount1, null));
-            configs.Add("filing_code", createExpandoObject("filing_code", "filing_code_display", "name", "code", filingcode1, new string[1] { "document_type"}));
-            configs.Add("document_type", createExpandoObject("document_type", "document_type_display", "name", "code", filingsecurity1, null));
-            configs.Add("caseparty_type", createExpandoObject("caseparty_type", "caseparty_type_display", "name", "code", casepartytype1, null));
-            configs.Add("service_contact", createExpandoObject("service_contact", "service_contact_display", "email", "service_contact_id", contact1, null));
+            configs.Add("jurisdiction", createExpandoObject("jurisdiction", "jurisdiction_display", "name", "code", jurisdiction1, new string[2] { "case_category", "filer_type" }, true));
+            configs.Add("case_category", createExpandoObject("case_category", "case_category_display", "name", "code", casecategory1, new string[3] { "case_type", "procedure_remedy", "damage_amount" }, true));
+            configs.Add("filer_type", createExpandoObject("filer_type", "filer_type_display", "name", "code", filertype1, null, true));
+            configs.Add("case_type", createExpandoObject("case_type", "case_type_display", "name", "code", casetype1, new string[4] { "caseparty_type", "case_parties", "filing_code", "filings"}, true));
+            configs.Add("procedure_remedy", createExpandoObject("procedure_remedy", "procedure_remedy_display", "name", "code", remedy1, null, true));
+            configs.Add("damage_amount", createExpandoObject("damage_amount", "damage_amount_display", "name", "code", damageamount1, null, true));
+            configs.Add("filing_attorney", createExpandoObject("filing_attorney", "filing_attorney_display", "display_name", "id", filingattorney1, null, true));
+            configs.Add("payment_account", createExpandoObject("payment_account", "payment_account_display", "account_name", "payment_account_id", paymentaccount1, null, true));
+            configs.Add("filing_code", createExpandoObject("filing_code", "filing_code_display", "name", "code", filingcode1, new string[1] { "document_type"}, false));
+            configs.Add("document_type", createExpandoObject("document_type", "document_type_display", "name", "code", filingsecurity1, null, true));
+            configs.Add("caseparty_type", createExpandoObject("caseparty_type", "caseparty_type_display", "name", "code", casepartytype1, null, false));
+            configs.Add("service_contact", createExpandoObject("service_contact", "service_contact_display", "email", "service_contact_id", contact1, null, true));
+            configs.Add("case_parties", createExpandoObject("", "", "", "", caseparties1, null, false));
+            configs.Add("filings", createExpandoObject("", "", "", "", filings1, null, false));
+
 
         }
-        public dynamic createExpandoObject(string code, string display,  string combodisplay, string combovalue, ComboBox component, string[] dependents)
+        public dynamic createExpandoObject(string code, string display,  string combodisplay, string combovalue, Control component, string[] dependents, bool storedataonchange)
         {
             dynamic expando = new ExpandoObject();
             expando.code = code;
@@ -64,18 +68,27 @@ namespace EFileApp
             expando.combodisplay = combodisplay;
             expando.combovalue = combovalue;
             expando.dependents = dependents;
+            expando.storedataonchange = storedataonchange;
             return expando;
         }
         //----------------------------------------------------------------------------------------------------
-        public string getDataValue(string key)
+        public string getJSONValue(string root, string key)
         {
-            JObject data = (JObject)payload.GetValue("data");
+            JObject data = null;
+            if (root == "data")
+            {
+                data = (JObject)payload.GetValue("data");
+            }
             return (string)data.GetValue(key);
         }
 
-        public void setDataValue(string key, string value)
+        public void setJSONValue(string root, string key, string value)
         {
-            JObject data = (JObject)payload.GetValue("data");
+            JObject data = null;
+            if (root == "data")
+            {
+                data = (JObject)payload.GetValue("data");
+            }
             data.Remove(key);
             data.Add(new JProperty(key, value));
         }
@@ -143,7 +156,8 @@ namespace EFileApp
             loadData("payment_account", true);
             loadData("filing_attorney", true);
             loadData("filer_type", true);
-            
+
+            reloadCasePartyTable();
             reloadFilingsTable();
         }
 
@@ -155,8 +169,8 @@ namespace EFileApp
             combobox.DisplayMember = "name";
             combobox.ValueMember = "code";
 
-            string existingcode = getDataValue(config.code);
-            string existingdisplay = getDataValue(config.display);
+            string existingcode = getJSONValue("data", config.code);
+            string existingdisplay = getJSONValue("data", config.display);
 
             dynamic eitem = new { name = existingdisplay, code = existingcode };
 
@@ -164,7 +178,6 @@ namespace EFileApp
             {
                 if (existingcode != null && existingcode.Length != 0)
                 {
-                    
                     combobox.Items.Add(eitem);
                     combobox.SelectedItem = eitem;
                 }
@@ -179,8 +192,7 @@ namespace EFileApp
                     string idisplay = item[config.combodisplay];
 
                     eitem = new { name = idisplay, code = icode };
-                    combobox.Items.Add(eitem);
-
+             
                     if(icode == existingcode)
                     {
                         continue;
@@ -209,6 +221,12 @@ namespace EFileApp
 
         //----------------------------------------------------------------------------------------------------
 
+        public void storeData(dynamic config, string code, string display)
+        {
+            setJSONValue("data", config.code, code);
+            setJSONValue("data", config.display, display);
+        }
+
         public void indexChange(string type) // If api is null, load as new
         {
             dynamic config = configs[type];
@@ -221,8 +239,11 @@ namespace EFileApp
                 display = item.name;
             }
 
-            setDataValue(config.code, code);
-            setDataValue(config.display, display);
+            if (config.storedataonchange)
+            {
+                MethodInfo dynMethod = this.GetType().GetMethod("storeData", BindingFlags.Public | BindingFlags.Instance);
+                dynMethod.Invoke(this, new object[] { config, code, display });
+            }
 
             string[] dependents = config.dependents;
             if (dependents != null)
@@ -230,11 +251,17 @@ namespace EFileApp
                 foreach (string dependent in dependents)
                 {
                     dynamic dconfig = configs[dependent];
-                    ComboBox dcombo = dconfig.component;
-                    dcombo.SelectedItem = null;
-                    dcombo.Items.Clear();
-                    dcombo.ResetText();
-                    dconfig.isloaded = false;
+                    if (dconfig.component.GetType() == typeof(ComboBox)) {
+                        ComboBox dcombo = dconfig.component;
+                        dcombo.SelectedItem = null;
+                        dcombo.Items.Clear();
+                        dcombo.ResetText();
+                        dconfig.isloaded = false;
+                    } else
+                    {
+                        DataGridView dcombo = dconfig.component;
+                        dcombo.Rows.Clear();
+                    }
                 }
             }
         }
@@ -254,7 +281,7 @@ namespace EFileApp
                     }
                     else if (type == "case_category")
                     {
-                        string jurisdiction = getDataValue("jurisdiction");
+                        string jurisdiction = getJSONValue("data", "jurisdiction");
                         if (jurisdiction != null)
                         {
                             api = "/code/case_category_codes?location_code=" + jurisdiction;
@@ -263,8 +290,8 @@ namespace EFileApp
                     }
                     else if (type == "case_type")
                     {
-                        string jurisdiction = getDataValue("jurisdiction");
-                        string case_category = getDataValue("case_category");
+                        string jurisdiction = getJSONValue("data", "jurisdiction");
+                        string case_category = getJSONValue("data", "case_category");
                         if (jurisdiction != null && case_category != null)
                         {
                             api = "/code/case_type_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&is_initial=true";
@@ -272,8 +299,8 @@ namespace EFileApp
                     }
                     else if (type == "procedure_remedy")
                     {
-                        string jurisdiction = getDataValue("jurisdiction");
-                        string case_category = getDataValue("case_category");
+                        string jurisdiction = getJSONValue("data", "jurisdiction");
+                        string case_category = getJSONValue("data", "case_category");
                         if (jurisdiction != null && case_category != null)
                         {
                             api = "/code/procedure_remedy_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&is_initial=true";
@@ -281,8 +308,8 @@ namespace EFileApp
                     }
                     else if (type == "damage_amount")
                     {
-                        string jurisdiction = getDataValue("jurisdiction");
-                        string case_category = getDataValue("case_category");
+                        string jurisdiction = getJSONValue("data", "jurisdiction");
+                        string case_category = getJSONValue("data", "case_category");
                         if (jurisdiction != null && case_category != null)
                         {
                             api = "/code/damage_amount_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&is_initial=true";
@@ -290,7 +317,7 @@ namespace EFileApp
                     }
                     else if (type == "filer_type")
                     {
-                        string jurisdiction = getDataValue("jurisdiction");
+                        string jurisdiction = getJSONValue("data", "jurisdiction");
                         if (jurisdiction != null)
                         {
                             api = "/code/filer_type_codes?location_code=" + jurisdiction;
@@ -308,8 +335,8 @@ namespace EFileApp
                     }
                     else if (type == "caseparty_type")
                     {
-                        string jurisdiction = getDataValue("jurisdiction");
-                        string case_type = getDataValue("case_type");
+                        string jurisdiction = getJSONValue("data", "jurisdiction");
+                        string case_type = getJSONValue("data", "case_type");
                         if (jurisdiction != null && case_type != null)
                         {
                             api = "/code/party_type_codes?is_required=false&location_code=" + jurisdiction + "&case_type_code=" + case_type;
@@ -317,9 +344,9 @@ namespace EFileApp
                     }
                     else if (type == "filing_code")
                     {
-                        string jurisdiction = getDataValue("jurisdiction");
-                        string case_category = getDataValue("case_category");
-                        string case_type = getDataValue("case_type");
+                        string jurisdiction = getJSONValue("data", "jurisdiction");
+                        string case_category = getJSONValue("data", "case_category");
+                        string case_type = getJSONValue("data", "case_type");
                         if (jurisdiction != null && case_category != null && case_type != null)
                         {
                             api = "/code/filing_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&case_type_code=" + case_type + "&is_initial=true";
@@ -327,10 +354,11 @@ namespace EFileApp
                     }
                     else if (type == "document_type")
                     {
-                        string jurisdiction = getDataValue("jurisdiction");
-                        string filing_code = getDataValue("filing_code");
-                        if (jurisdiction != null && filing_code != null)
+                        string jurisdiction = getJSONValue("data", "jurisdiction");
+                        
+                        if (jurisdiction != null && filingcode1.SelectedItem != null)
                         {
+                            string filing_code = (filingcode1.SelectedItem as dynamic).code;
                             api = "/code/document_type_codes?location_code=" + jurisdiction + "&filing_code=" + filing_code;
                         }
                     }
@@ -523,7 +551,7 @@ namespace EFileApp
             JObject caseparty = new JObject();
             caseparty.Add(new JProperty("type", code));
             caseparty.Add(new JProperty("type_display", name));
-            caseparty.Add(new JProperty("identifcation_object", "Party_" + generateUID()));
+            caseparty.Add(new JProperty("id", "Party_" + generateUID()));
 
             JObject data = (JObject)payload.GetValue("data");
             JArray case_parties = (JArray)data.GetValue("case_parties");
@@ -540,7 +568,7 @@ namespace EFileApp
             {
                 caseparties1.Rows.Add(new[] {
                     case_party.GetValue("type_display"),
-                    "test",
+                    case_party.GetValue("first_name"),
                     case_party.GetValue("middle_name"),
                     case_party.GetValue("last_name")
                 });
@@ -549,43 +577,6 @@ namespace EFileApp
 
 
 
-        private void loadcasepartytypeandparties()
-        {
-            string jurisdiction = getDataValue("jurisdiction");
-            string casetype = getDataValue("case_type");
-
-            JObject data = (JObject)payload.GetValue("data");
-            JArray case_parties = (JArray)data.GetValue("case_parties");
-            case_parties.Clear();
-
-            if (jurisdiction != null && casetype != null)
-            {
-
-                JsonObject codes = AppConstants.ApiCaller.get("/code/party_type_codes?is_required=true&location_code=" + jurisdiction + "&case_type_code=" + casetype);
-                JsonObject codes1 = AppConstants.ApiCaller.get("/code/party_type_codes?is_required=false&location_code=" + jurisdiction + "&case_type_code=" + casetype);
-                dynamic items = codes["items"];
-                dynamic items1 = codes1["items"];
-
-                casepartytype1.DisplayMember = "name";
-                casepartytype1.ValueMember = "code";
-                foreach (var item in items)
-                {
-                    if (jurisdiction1.Enabled)
-                    {
-                        addCasePartyToPayload(item);
-                    }
-                    casepartytype1.Items.Add(new { name = item["name"], code = item["code"] });
-                }
-
-                foreach (var item in items1)
-                {
-                    casepartytype1.Items.Add(new { name = item["name"], code = item["code"] });
-                }
-
-            }
-
-            reloadCasePartyTable();
-        }
 
 
         //----------------------------------------------------------------------------------------------------
@@ -594,9 +585,9 @@ namespace EFileApp
         
         private void loadfilingcodes()
         {
-            string jurisdiction = getDataValue("jurisdiction");
-            string case_category = getDataValue("case_category");
-            string case_type = getDataValue("case_type");
+            string jurisdiction = getJSONValue("data", "jurisdiction");
+            string case_category = getJSONValue("data", "case_category");
+            string case_type = getJSONValue("data", "case_type");
             if (jurisdiction != null && case_category != null && case_type != null)
             {
                 string api = "filing_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&case_type_code=" + case_type + "&is_initial=true";
@@ -607,7 +598,7 @@ namespace EFileApp
 
         private void loadfilingsecurity()
         {
-            string jurisdiction = getDataValue("jurisdiction");
+            string jurisdiction = getJSONValue("data", "jurisdiction");
             if (jurisdiction != null && filingcode1.SelectedItem != null)
             {
                 string filingcode = (filingcode1.SelectedItem as dynamic).code;
@@ -633,8 +624,8 @@ namespace EFileApp
                 JObject filing = new JObject();
                 filing.Add(new JProperty("code", filingcode));
                 filing.Add(new JProperty("code_display", filingcodedisplay));
-                filing.Add(new JProperty("lead_doc_security", filingsecurity));
-                filing.Add(new JProperty("lead_doc_security_display", filingsecuritydisplay));
+                filing.Add(new JProperty("doc_type", filingsecurity));
+                filing.Add(new JProperty("doc_type_display", filingsecuritydisplay));
 
                 JObject data = (JObject)payload.GetValue("data");
                 JArray filings = (JArray)data.GetValue("filings");
@@ -655,7 +646,7 @@ namespace EFileApp
             {
                 filings1.Rows.Add(new[] {
                     filing.GetValue("code_display"),
-                    filing.GetValue("lead_doc_security_display")
+                    filing.GetValue("doc_type_display")
                 });
             }
         }
@@ -706,7 +697,11 @@ namespace EFileApp
         }
 
 
-        
+        //----------------------------------------------------------------------------------------------------
+        //Filing code
+        //----------------------------------------------------------------------------------------------------
+
+
         private void previewtemplate1_Click(object sender, EventArgs e)
         {
             frmPayload pa = new frmPayload(payload);
@@ -873,7 +868,7 @@ namespace EFileApp
                 lead_doc_code = "332",
                 //filing_description = getSelectedDisplay(filingcode),
                 lead_doc_path = "${lead_doc" + count + "}",
-                //  lead_doc_security = getSelectedValue(documenttype, "documenttype"),
+                //  doc_type = getSelectedValue(documenttype, "documenttype"),
                 //       code = getSelectedValue(filingcode, "filingcode"),
                 attachment = new[] {
                             new
@@ -1066,11 +1061,6 @@ namespace EFileApp
             filingList.Add(create);
             UpdateFilingListView();
         }
-
-
-
-
-
 
 
     }
