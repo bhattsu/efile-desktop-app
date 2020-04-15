@@ -118,6 +118,9 @@ namespace EFileApp
         private void template1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string path = (template1.SelectedItem as dynamic).code;
+            //this.Controls.Clear();
+            //this.InitializeComponent();
+
             string readText = File.ReadAllText(path);
             payload = JObject.Parse(readText);
 
@@ -152,28 +155,42 @@ namespace EFileApp
             combobox.DisplayMember = "name";
             combobox.ValueMember = "code";
 
+            string existingcode = getDataValue(config.code);
+            string existingdisplay = getDataValue(config.display);
 
-            dynamic eitem = new { name = config.display, code = config.code };
+            dynamic eitem = new { name = existingdisplay, code = existingcode };
+
             if (api == null)
             {
-                /*
                 if (existingcode != null && existingcode.Length != 0)
                 {
+                    
                     combobox.Items.Add(eitem);
                     combobox.SelectedItem = eitem;
                 }
-                */
             }
             else
             {
-                combobox.Items.Clear();
-                combobox.ResetText();
+           
                 dynamic codes = AppConstants.ApiCaller.get(api);
                 foreach (var item in codes["items"])
                 {
-                    combobox.Items.Add(new { name = item[config.combodisplay], code = item[config.combovalue] });
-                }   
-                selectComboItem(jurisdiction1, eitem);
+                    string icode = item[config.combovalue];
+                    string idisplay = item[config.combodisplay];
+
+                    eitem = new { name = idisplay, code = icode };
+                    combobox.Items.Add(eitem);
+
+                    if(icode == existingcode)
+                    {
+                        continue;
+                    } else
+                    {
+                        eitem = new { name = idisplay, code = icode };
+                        combobox.Items.Add(eitem);
+                    }
+                    
+                }
             }
         }
 
@@ -203,8 +220,10 @@ namespace EFileApp
                 code = item.code;
                 display = item.name;
             }
+
             setDataValue(config.code, code);
             setDataValue(config.display, display);
+
             string[] dependents = config.dependents;
             if (dependents != null)
             {
@@ -213,6 +232,8 @@ namespace EFileApp
                     dynamic dconfig = configs[dependent];
                     ComboBox dcombo = dconfig.component;
                     dcombo.SelectedItem = null;
+                    dcombo.Items.Clear();
+                    dcombo.ResetText();
                     dconfig.isloaded = false;
                 }
             }
@@ -224,89 +245,104 @@ namespace EFileApp
             if (!config.isloaded)
             {
                 string api = null;
-                if(type == "jurisdiction")
+                
+                if (!isinitial)
                 {
-                    api = "/code/location_codes";
-                } else if (type == "case_category")
-                {
-                    string jurisdiction = getDataValue("jurisdiction");
-                    if (jurisdiction != null)
+                    if (type == "jurisdiction")
                     {
-                        api = "/code/case_category_codes?location_code=" + jurisdiction;
+                        api = "/code/location_codes";
+                    }
+                    else if (type == "case_category")
+                    {
+                        string jurisdiction = getDataValue("jurisdiction");
+                        if (jurisdiction != null)
+                        {
+                            api = "/code/case_category_codes?location_code=" + jurisdiction;
+                        }
+
+                    }
+                    else if (type == "case_type")
+                    {
+                        string jurisdiction = getDataValue("jurisdiction");
+                        string case_category = getDataValue("case_category");
+                        if (jurisdiction != null && case_category != null)
+                        {
+                            api = "/code/case_type_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&is_initial=true";
+                        }
+                    }
+                    else if (type == "procedure_remedy")
+                    {
+                        string jurisdiction = getDataValue("jurisdiction");
+                        string case_category = getDataValue("case_category");
+                        if (jurisdiction != null && case_category != null)
+                        {
+                            api = "/code/procedure_remedy_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&is_initial=true";
+                        }
+                    }
+                    else if (type == "damage_amount")
+                    {
+                        string jurisdiction = getDataValue("jurisdiction");
+                        string case_category = getDataValue("case_category");
+                        if (jurisdiction != null && case_category != null)
+                        {
+                            api = "/code/damage_amount_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&is_initial=true";
+                        }
+                    }
+                    else if (type == "filer_type")
+                    {
+                        string jurisdiction = getDataValue("jurisdiction");
+                        if (jurisdiction != null)
+                        {
+                            api = "/code/filer_type_codes?location_code=" + jurisdiction;
+                        }
+                    }
+                    else if (type == "filing_attorney")
+                    {
+                        api = "/firm/attorneys";
+
+                    }
+                    else if (type == "payment_account")
+                    {
+                        api = "/payment_accounts";
+
+                    }
+                    else if (type == "caseparty_type")
+                    {
+                        string jurisdiction = getDataValue("jurisdiction");
+                        string case_type = getDataValue("case_type");
+                        if (jurisdiction != null && case_type != null)
+                        {
+                            api = "/code/party_type_codes?is_required=false&location_code=" + jurisdiction + "&case_type_code=" + case_type;
+                        }
+                    }
+                    else if (type == "filing_code")
+                    {
+                        string jurisdiction = getDataValue("jurisdiction");
+                        string case_category = getDataValue("case_category");
+                        string case_type = getDataValue("case_type");
+                        if (jurisdiction != null && case_category != null && case_type != null)
+                        {
+                            api = "/code/filing_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&case_type_code=" + case_type + "&is_initial=true";
+                        }
+                    }
+                    else if (type == "document_type")
+                    {
+                        string jurisdiction = getDataValue("jurisdiction");
+                        string filing_code = getDataValue("filing_code");
+                        if (jurisdiction != null && filing_code != null)
+                        {
+                            api = "/code/document_type_codes?location_code=" + jurisdiction + "&filing_code=" + filing_code;
+                        }
+                    }
+                    else if (type == "service_contact")
+                    {
+                        api = "/service_contacts";
                     }
 
-                } else if(type == "case_type")
-                {
-                    string jurisdiction = getDataValue("jurisdiction");
-                    string case_category = getDataValue("case_category");
-                    if (jurisdiction != null && case_category != null)
-                    {
-                        api = "/code/case_type_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&is_initial=true";
-                    }
-                } else if (type == "procedure_remedy")
-                {
-                    string jurisdiction = getDataValue("jurisdiction");
-                    string case_category = getDataValue("case_category");
-                    if (jurisdiction != null && case_category != null)
-                    {
-                        api = "/code/procedure_remedy_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&is_initial=true";
-                    }
-                } else if (type == "damage_amount")
-                {
-                    string jurisdiction = getDataValue("jurisdiction");
-                    string case_category = getDataValue("case_category");
-                    if (jurisdiction != null && case_category != null)
-                    {
-                        api = "/code/damage_amount_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&is_initial=true";
-                    }
-                } else if (type == "filer_type")
-                {
-                    string jurisdiction = getDataValue("jurisdiction");
-                    if (jurisdiction != null)
-                    {
-                        api = "/code/filer_type_codes?location_code=" + jurisdiction;
-                    }
-                } else if (type == "filing_attorney")
-                {
-                   api = "/firm/attorneys";
-
-                } else if (type == "payment_account")
-                {
-                    api = "/payment_accounts";
-
-                } else if (type == "caseparty_type")
-                {
-                    string jurisdiction = getDataValue("jurisdiction");
-                    string case_type = getDataValue("case_type");
-                    if (jurisdiction != null && case_type != null)
-                    {
-                        api = "/code/party_type_codes?is_required=false&location_code=" + jurisdiction + "&case_type_code=" + case_type;
-                    }
-                }
-                else if (type == "filing_code")
-                {
-                    string jurisdiction = getDataValue("jurisdiction");
-                    string case_category = getDataValue("case_category");
-                    string case_type = getDataValue("case_type");
-                    if (jurisdiction != null && case_category != null && case_type != null)
-                    {
-                        api = "/code/filing_codes?location_code=" + jurisdiction + "&case_category_code=" + case_category + "&case_type_code=" + case_type + "&is_initial=true";
-                    }
-                }
-                else if (type == "document_type")
-                {
-                    string jurisdiction = getDataValue("jurisdiction");
-                    string filing_code = getDataValue("filing_code");
-                    if (jurisdiction != null && filing_code != null)
-                    {
-                        api = "/code/document_type_codes?location_code=" + jurisdiction + "&filing_code=" + filing_code;
-                    }
-                } else if (type == "service_contact")
-                {
-                    api = "/service_contacts";
+                    config.isloaded = true;
                 }
                 loadComboData(config, api);
-                config.isloaded = true;
+               
             }
         }
         //----------------------------------------------------------------------------------------------------
@@ -670,6 +706,7 @@ namespace EFileApp
         }
 
 
+        
         private void previewtemplate1_Click(object sender, EventArgs e)
         {
             frmPayload pa = new frmPayload(payload);
@@ -685,6 +722,24 @@ namespace EFileApp
 
 
 
+        public void UpdateFilingListView()
+        {
+
+            lvFilings.Items.Clear();
+            foreach (var filing in filingList)
+            {
+                var row = new ListViewItem(new[] {
+                    filing.FilingName,
+                    filing.SecurityName,
+                    (filing.OptionalServices != null && filing.OptionalServices.Count > 0) ?
+                    string.Join(", ",filing.OptionalServices.Select(x=>x.Name).ToArray()) :"",
+                    (filing.LeadDocumentPath != null && filing.LeadDocumentPath.Length> 0) ?   Path.GetFileName(filing.LeadDocumentPath) : "",
+                    (filing.Attachments != null && filing.Attachments.Count > 0) ?
+                    string.Join(", ", filing.Attachments.Select(x => Path.GetFileName(x.Path)).ToArray()) : "",
+                }); ;
+                lvFilings.Items.Add(row);
+            }
+        }
 
 
 
@@ -1015,24 +1070,7 @@ namespace EFileApp
 
 
 
-        public void UpdateFilingListView()
-        {
 
-            lvFilings.Items.Clear();
-            foreach (var filing in filingList)
-            {
-                var row = new ListViewItem(new[] {
-                    filing.FilingName,
-                    filing.SecurityName,
-                    (filing.OptionalServices != null && filing.OptionalServices.Count > 0) ?
-                    string.Join(", ",filing.OptionalServices.Select(x=>x.Name).ToArray()) :"",
-                    (filing.LeadDocumentPath != null && filing.LeadDocumentPath.Length> 0) ?   Path.GetFileName(filing.LeadDocumentPath) : "",
-                    (filing.Attachments != null && filing.Attachments.Count > 0) ?
-                    string.Join(", ", filing.Attachments.Select(x => Path.GetFileName(x.Path)).ToArray()) : "",
-                }); ;
-                lvFilings.Items.Add(row);
-            }
-        }
 
 
     }

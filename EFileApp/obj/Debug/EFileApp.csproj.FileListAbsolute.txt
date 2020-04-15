@@ -118,3 +118,4 @@ c:\uslegalpro\bulk\efile-desktop-app\EFileApp\obj\Debug\EFileApp.csproj.CoreComp
 c:\uslegalpro\bulk\efile-desktop-app\EFileApp\obj\Debug\EFileApp.csproj.CopyComplete
 c:\uslegalpro\bulk\efile-desktop-app\EFileApp\obj\Debug\EFileApp.exe
 c:\uslegalpro\bulk\efile-desktop-app\EFileApp\obj\Debug\EFileApp.pdb
+c:\uslegalpro\bulk\efile-desktop-app\EFileApp\obj\Debug\EFileApp.csprojAssemblyReference.cache
