@@ -159,6 +159,7 @@ namespace EFileApp
 
             reloadCasePartyTable();
             reloadFilingsTable();
+            reloadServiceContactsTable();
         }
 
         //----------------------------------------------------------------------------------------------------

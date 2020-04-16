@@ -699,3 +699,25 @@ System.Exception: Authentication failed, invalid/expired authentication token or
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\frmLogin.cs:line 68
+ERROR [15 Apr 23:35:02][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\efile-desktop-app\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\frmLogin.cs:line 68
+ERROR [15 Apr 23:35:05][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\efile-desktop-app\EFileApp\Helper\LogManager.cs:47)]- Authentication failed, invalid/expired authentication token or email/password combination
+System.Exception: Authentication failed, invalid/expired authentication token or email/password combination
+   at EFileApp.Helper.APICall.<AuthenticateAsync>d__7.MoveNext() in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\Helper\APICall.cs:line 73
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at EFileApp.frmLogin.<btnLogin_Click>d__12.MoveNext() in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\frmLogin.cs:line 68
+ERROR [16 Apr 10:56:35][EFileApp.Helper.LogManager.LogError(c:\uslegalpro\bulk\efile-desktop-app\EFileApp\Helper\LogManager.cs:47)]- Invalid JSON string
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at EFileApp.Helper.APICall.Listbatches(Int32 startBatch, Int32 limit, String searchString) in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\Helper\APICall.cs:line 217
+   at EFileApp.frmBatches.LoadBatches(Int32 firstBatch, Int32 limit) in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\frmBatches.cs:line 456
+   at EFileApp.frmBatches.frmBatches_Load(Object sender, EventArgs e) in c:\uslegalpro\bulk\efile-desktop-app\EFileApp\frmBatches.cs:line 37
