@@ -12,6 +12,7 @@ using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -44,12 +45,12 @@ namespace EFileApp
             configs.Add("jurisdiction", createExpandoObject("jurisdiction", "jurisdiction_display", "name", "code", jurisdiction1, new string[2] { "case_category", "filer_type" }, true));
             configs.Add("case_category", createExpandoObject("case_category", "case_category_display", "name", "code", casecategory1, new string[3] { "case_type", "procedure_remedy", "damage_amount" }, true));
             configs.Add("filer_type", createExpandoObject("filer_type", "filer_type_display", "name", "code", filertype1, null, true));
-            configs.Add("case_type", createExpandoObject("case_type", "case_type_display", "name", "code", casetype1, new string[4] { "caseparty_type", "case_parties", "filing_code", "filings"}, true));
+            configs.Add("case_type", createExpandoObject("case_type", "case_type_display", "name", "code", casetype1, new string[4] { "caseparty_type", "case_parties", "filing_code", "filings" }, true));
             configs.Add("procedure_remedy", createExpandoObject("procedure_remedy", "procedure_remedy_display", "name", "code", remedy1, null, true));
             configs.Add("damage_amount", createExpandoObject("damage_amount", "damage_amount_display", "name", "code", damageamount1, null, true));
             configs.Add("filing_attorney", createExpandoObject("filing_attorney", "filing_attorney_display", "display_name", "id", filingattorney1, null, true));
             configs.Add("payment_account", createExpandoObject("payment_account", "payment_account_display", "account_name", "payment_account_id", paymentaccount1, null, true));
-            configs.Add("filing_code", createExpandoObject("filing_code", "filing_code_display", "name", "code", filingcode1, new string[1] { "document_type"}, false));
+            configs.Add("filing_code", createExpandoObject("filing_code", "filing_code_display", "name", "code", filingcode1, new string[1] { "document_type" }, false));
             configs.Add("document_type", createExpandoObject("document_type", "document_type_display", "name", "code", filingsecurity1, null, true));
             configs.Add("caseparty_type", createExpandoObject("caseparty_type", "caseparty_type_display", "name", "code", casepartytype1, null, false));
             configs.Add("service_contact", createExpandoObject("service_contact", "service_contact_display", "email", "service_contact_id", contact1, null, true));
@@ -58,7 +59,7 @@ namespace EFileApp
 
 
         }
-        public dynamic createExpandoObject(string code, string display,  string combodisplay, string combovalue, Control component, string[] dependents, bool storedataonchange)
+        public dynamic createExpandoObject(string code, string display, string combodisplay, string combovalue, Control component, string[] dependents, bool storedataonchange)
         {
             dynamic expando = new ExpandoObject();
             expando.code = code;
@@ -162,7 +163,7 @@ namespace EFileApp
         }
 
         //----------------------------------------------------------------------------------------------------
-
+        
         public void loadComboData(dynamic config, string api)
         {
             ComboBox combobox = config.component;
@@ -184,7 +185,7 @@ namespace EFileApp
             }
             else
             {
-           
+
                 dynamic codes = AppConstants.ApiCaller.get(api);
                 foreach (var item in codes["items"])
                 {
@@ -192,16 +193,17 @@ namespace EFileApp
                     string idisplay = item[config.combodisplay];
 
                     eitem = new { name = idisplay, code = icode };
-             
-                    if(icode == existingcode)
+
+                    if (icode == existingcode)
                     {
                         continue;
-                    } else
+                    }
+                    else
                     {
                         eitem = new { name = idisplay, code = icode };
                         combobox.Items.Add(eitem);
                     }
-                    
+
                 }
             }
         }
@@ -251,13 +253,15 @@ namespace EFileApp
                 foreach (string dependent in dependents)
                 {
                     dynamic dconfig = configs[dependent];
-                    if (dconfig.component.GetType() == typeof(ComboBox)) {
+                    if (dconfig.component.GetType() == typeof(ComboBox))
+                    {
                         ComboBox dcombo = dconfig.component;
                         dcombo.SelectedItem = null;
                         dcombo.Items.Clear();
                         dcombo.ResetText();
                         dconfig.isloaded = false;
-                    } else
+                    }
+                    else
                     {
                         DataGridView dcombo = dconfig.component;
                         dcombo.Rows.Clear();
@@ -272,7 +276,7 @@ namespace EFileApp
             if (!config.isloaded)
             {
                 string api = null;
-                
+
                 if (!isinitial)
                 {
                     if (type == "jurisdiction")
@@ -355,7 +359,7 @@ namespace EFileApp
                     else if (type == "document_type")
                     {
                         string jurisdiction = getJSONValue("data", "jurisdiction");
-                        
+
                         if (jurisdiction != null && filingcode1.SelectedItem != null)
                         {
                             string filing_code = (filingcode1.SelectedItem as dynamic).code;
@@ -370,7 +374,7 @@ namespace EFileApp
                     config.isloaded = true;
                 }
                 loadComboData(config, api);
-               
+
             }
         }
         //----------------------------------------------------------------------------------------------------
@@ -416,7 +420,7 @@ namespace EFileApp
         //----------------------------------------------------------------------------------------------------
         //Procedure Remedy
         //----------------------------------------------------------------------------------------------------
- 
+
 
         private void remedy1_Click(object sender, EventArgs e)
         {
@@ -532,6 +536,7 @@ namespace EFileApp
 
         private void addcaseparty1_Click(object sender, EventArgs e)
         {
+            
             dynamic item = casepartytype1.SelectedItem;
             if (item != null)
             {
@@ -561,18 +566,24 @@ namespace EFileApp
 
         public void reloadCasePartyTable()
         {
+            int index = 0;
             caseparties1.Rows.Clear();
             JObject data = (JObject)payload.GetValue("data");
             JArray case_parties = (JArray)data.GetValue("case_parties");
             foreach (JObject case_party in case_parties)
-            {
-                caseparties1.Rows.Add(new[] {
+            { 
+
+                caseparties1.Rows.Add(new[] {  
                     case_party.GetValue("type_display"),
                     case_party.GetValue("first_name"),
                     case_party.GetValue("middle_name"),
                     case_party.GetValue("last_name")
                 });
-            }
+                
+                this.caseparties1.Rows[index].Cells[11].Value = "Remove";
+                index++;
+                
+            } 
         }
 
 
@@ -582,7 +593,7 @@ namespace EFileApp
         //----------------------------------------------------------------------------------------------------
         //Filing code
         //----------------------------------------------------------------------------------------------------
-        
+
         private void loadfilingcodes()
         {
             string jurisdiction = getJSONValue("data", "jurisdiction");
@@ -613,7 +624,8 @@ namespace EFileApp
 
         private void addfiling1_Click(object sender, EventArgs e)
         {
-            if (filingcode1.SelectedItem != null && filingsecurity1.SelectedItem != null) {
+            if (filingcode1.SelectedItem != null && filingsecurity1.SelectedItem != null)
+            {
 
                 string filingcode = (filingcode1.SelectedItem as dynamic).code;
                 string filingcodedisplay = (filingcode1.SelectedItem as dynamic).name;
@@ -632,13 +644,14 @@ namespace EFileApp
                 filings.Add(filing);
                 reloadFilingsTable();
                 //MessageBox.Show(payload.ToString());
-             }
-            
+            }
+
         }
 
 
         public void reloadFilingsTable()
         {
+            int index = 0;
             filings1.Rows.Clear();
             JObject data = (JObject)payload.GetValue("data");
             JArray filings = (JArray)data.GetValue("filings");
@@ -648,6 +661,8 @@ namespace EFileApp
                     filing.GetValue("code_display"),
                     filing.GetValue("doc_type_display")
                 });
+ 
+                index++;
             }
         }
 
@@ -752,7 +767,7 @@ namespace EFileApp
         {
             InitializeComponent();
             initializePayload();
-            
+
 
             //this.settings = settings;
 
@@ -913,11 +928,11 @@ namespace EFileApp
 
         private async void searchcase_Click(object sender, EventArgs e)
         {
-            
+
         }
         public async Task GetCaseDetailsByIdAsync(CaseSearchResultDTO item)
         {
-           
+
         }
 
         private void addcaseparty_Click(object sender, EventArgs e)
@@ -967,7 +982,7 @@ namespace EFileApp
             lbServiceContacts.ValueMember = "code";
             foreach (var item in services["items"])
             {
-                lbServiceContacts.Items.Add(new { name = item["email"], code = item["service_contact_id"] });
+                lbServiceContacts.Items.Add(new { name = item["email"], code = item["id"] });
             }
 
         }
@@ -1033,7 +1048,7 @@ namespace EFileApp
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-  
+
         }
 
         private void btnGenerateTemplate_Click(object sender, EventArgs e)
@@ -1062,6 +1077,18 @@ namespace EFileApp
             UpdateFilingListView();
         }
 
-
+        private void caseparties1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (caseparties1.CurrentCell != null)
+            {
+                if (caseparties1.CurrentCell.ColumnIndex.Equals(11) && e.RowIndex != -1)
+                {
+                    if (caseparties1.CurrentCell != null)
+                        caseparties1.Rows.RemoveAt(e.RowIndex);
+                }
+            }
+            
+        }
+ 
     }
 }
