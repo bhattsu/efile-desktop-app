@@ -94,6 +94,22 @@ namespace EFileApp
             data.Add(new JProperty(key, value));
         }
 
+        public void removeJSONNode(string root, string key, string value)
+        {
+           if (root == "case_parties")
+            {
+                JObject data = (JObject)payload.GetValue("data");
+                JArray case_parties = (JArray)data.GetValue("case_parties");
+                foreach(JObject case_party in case_parties)
+                {
+                    if ((string)case_party.GetValue("id") == value)
+                    {
+                        case_parties.Remove(case_party);
+                    }
+                }
+            }
+        }
+
         public string generateUID()
         {
             var rfc4122bytes = Convert.FromBase64String("aguidthatIgotonthewire==");
@@ -574,20 +590,32 @@ namespace EFileApp
             foreach (JObject case_party in case_parties)
             { 
 
-                caseparties1.Rows.Add(new[] {  
+                caseparties1.Rows.Add(new[] {
+                    "Remove",
                     case_party.GetValue("type_display"),
                     case_party.GetValue("first_name"),
                     case_party.GetValue("middle_name"),
                     case_party.GetValue("last_name")
-                });
-                
-                this.caseparties1.Rows[index].Cells[11].Value = "Remove";
+                });;
+
+           
                 index++;
                 
             } 
         }
 
 
+        public int getCellIndexByName(DataGridView dgv, string headerText)
+        {
+
+            foreach (DataGridViewColumn column in dgv.Columns) {
+                if (column.HeaderText.Equals(headerText, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return column.Index;
+                }
+            }
+            return -1;
+        }
 
 
 
@@ -1084,10 +1112,12 @@ namespace EFileApp
         {
             if (caseparties1.CurrentCell != null)
             {
-                if (caseparties1.CurrentCell.ColumnIndex.Equals(11) && e.RowIndex != -1)
+                int cellIndex = getCellIndexByName(this.caseparties1, "Action");
+
+                if (caseparties1.CurrentCell.ColumnIndex == cellIndex && e.RowIndex != -1)
                 {
-                    if (caseparties1.CurrentCell != null)
-                        caseparties1.Rows.RemoveAt(e.RowIndex);
+                    removeJSONNode("case_parties", "id", "1"); //One should be replaced with party id
+                    reloadCasePartyTable();
                 }
             }
             

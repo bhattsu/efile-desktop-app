@@ -42,6 +42,8 @@
             this.filler1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.filings1 = new System.Windows.Forms.DataGridView();
+            this.filing1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.security1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addfiling1 = new System.Windows.Forms.Button();
             this.filingsecurity1 = new System.Windows.Forms.ComboBox();
             this.filingcode1 = new System.Windows.Forms.ComboBox();
@@ -49,18 +51,6 @@
             this.addcaseparty1 = new System.Windows.Forms.Button();
             this.casepartytype1 = new System.Windows.Forms.ComboBox();
             this.caseparties1 = new System.Windows.Forms.DataGridView();
-            this.partytype1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firtname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.middlename = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.city = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.state = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.relatedAttorney = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.associatedAttorney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRemoveCaseParty = new System.Windows.Forms.DataGridViewButtonColumn();
             this.paymentaccount1 = new System.Windows.Forms.ComboBox();
             this.filertype1 = new System.Windows.Forms.ComboBox();
             this.filingattorney1 = new System.Windows.Forms.ComboBox();
@@ -106,8 +96,18 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.filing1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.security1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRemoveCaseParty = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.partytype1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firtname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middlename = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.city = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.state = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.relatedAttorney = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.associatedAttorney = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -131,11 +131,10 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tpServiceContacts);
             this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Location = new System.Drawing.Point(24, 15);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Location = new System.Drawing.Point(18, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1536, 929);
+            this.tabControl1.Size = new System.Drawing.Size(1152, 755);
             this.tabControl1.TabIndex = 23;
             // 
             // tabPage3
@@ -155,31 +154,28 @@
             this.tabPage3.Controls.Add(this.casetype1);
             this.tabPage3.Controls.Add(this.casecategory1);
             this.tabPage3.Controls.Add(this.jurisdiction1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(1528, 900);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Size = new System.Drawing.Size(1144, 729);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Remedy";
             // 
             // template1
             // 
             this.template1.FormattingEnabled = true;
-            this.template1.Location = new System.Drawing.Point(5, 7);
-            this.template1.Margin = new System.Windows.Forms.Padding(4);
+            this.template1.Location = new System.Drawing.Point(4, 6);
             this.template1.Name = "template1";
-            this.template1.Size = new System.Drawing.Size(539, 24);
+            this.template1.Size = new System.Drawing.Size(405, 21);
             this.template1.TabIndex = 69;
             this.template1.SelectedIndexChanged += new System.EventHandler(this.template1_SelectedIndexChanged);
             this.template1.Click += new System.EventHandler(this.template1_Click);
             // 
             // previewtemplate1
             // 
-            this.previewtemplate1.Location = new System.Drawing.Point(1251, 844);
-            this.previewtemplate1.Margin = new System.Windows.Forms.Padding(4);
+            this.previewtemplate1.Location = new System.Drawing.Point(938, 686);
             this.previewtemplate1.Name = "previewtemplate1";
-            this.previewtemplate1.Size = new System.Drawing.Size(137, 28);
+            this.previewtemplate1.Size = new System.Drawing.Size(103, 23);
             this.previewtemplate1.TabIndex = 68;
             this.previewtemplate1.Text = "Preview Template";
             this.previewtemplate1.UseVisualStyleBackColor = true;
@@ -187,10 +183,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1409, 844);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(1057, 686);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 67;
             this.button2.Text = "File";
             this.button2.UseVisualStyleBackColor = true;
@@ -200,11 +195,9 @@
             this.groupBox3.Controls.Add(this.contact1);
             this.groupBox3.Controls.Add(this.addservicecontact1);
             this.groupBox3.Controls.Add(this.servicecontact1);
-            this.groupBox3.Location = new System.Drawing.Point(8, 628);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(6, 510);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(1509, 182);
+            this.groupBox3.Size = new System.Drawing.Size(1132, 148);
             this.groupBox3.TabIndex = 66;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Service Contacts";
@@ -212,19 +205,17 @@
             // contact1
             // 
             this.contact1.FormattingEnabled = true;
-            this.contact1.Location = new System.Drawing.Point(9, 22);
-            this.contact1.Margin = new System.Windows.Forms.Padding(4);
+            this.contact1.Location = new System.Drawing.Point(7, 18);
             this.contact1.Name = "contact1";
-            this.contact1.Size = new System.Drawing.Size(527, 24);
+            this.contact1.Size = new System.Drawing.Size(396, 21);
             this.contact1.TabIndex = 2;
             this.contact1.Click += new System.EventHandler(this.contact1_Click);
             // 
             // addservicecontact1
             // 
-            this.addservicecontact1.Location = new System.Drawing.Point(545, 22);
-            this.addservicecontact1.Margin = new System.Windows.Forms.Padding(4);
+            this.addservicecontact1.Location = new System.Drawing.Point(409, 18);
             this.addservicecontact1.Name = "addservicecontact1";
-            this.addservicecontact1.Size = new System.Drawing.Size(100, 28);
+            this.addservicecontact1.Size = new System.Drawing.Size(75, 23);
             this.addservicecontact1.TabIndex = 1;
             this.addservicecontact1.Text = "Add";
             this.addservicecontact1.UseVisualStyleBackColor = true;
@@ -242,12 +233,11 @@
             this.email,
             this.name,
             this.filler1});
-            this.servicecontact1.Location = new System.Drawing.Point(8, 62);
-            this.servicecontact1.Margin = new System.Windows.Forms.Padding(4);
+            this.servicecontact1.Location = new System.Drawing.Point(6, 50);
             this.servicecontact1.Name = "servicecontact1";
             this.servicecontact1.ReadOnly = true;
             this.servicecontact1.RowHeadersWidth = 51;
-            this.servicecontact1.Size = new System.Drawing.Size(1493, 113);
+            this.servicecontact1.Size = new System.Drawing.Size(1120, 92);
             this.servicecontact1.TabIndex = 0;
             // 
             // email
@@ -256,7 +246,7 @@
             this.email.MinimumWidth = 6;
             this.email.Name = "email";
             this.email.ReadOnly = true;
-            this.email.Width = 71;
+            this.email.Width = 57;
             // 
             // name
             // 
@@ -264,7 +254,7 @@
             this.name.MinimumWidth = 6;
             this.name.Name = "name";
             this.name.ReadOnly = true;
-            this.name.Width = 74;
+            this.name.Width = 60;
             // 
             // filler1
             // 
@@ -280,11 +270,9 @@
             this.groupBox2.Controls.Add(this.addfiling1);
             this.groupBox2.Controls.Add(this.filingsecurity1);
             this.groupBox2.Controls.Add(this.filingcode1);
-            this.groupBox2.Location = new System.Drawing.Point(8, 446);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(6, 362);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1509, 175);
+            this.groupBox2.Size = new System.Drawing.Size(1132, 142);
             this.groupBox2.TabIndex = 65;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filings";
@@ -299,20 +287,35 @@
             this.filings1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.filing1,
             this.security1});
-            this.filings1.Location = new System.Drawing.Point(9, 58);
-            this.filings1.Margin = new System.Windows.Forms.Padding(4);
+            this.filings1.Location = new System.Drawing.Point(7, 47);
             this.filings1.Name = "filings1";
             this.filings1.ReadOnly = true;
             this.filings1.RowHeadersWidth = 51;
-            this.filings1.Size = new System.Drawing.Size(1492, 110);
+            this.filings1.Size = new System.Drawing.Size(1119, 89);
             this.filings1.TabIndex = 4;
+            // 
+            // filing1
+            // 
+            this.filing1.HeaderText = "Filing";
+            this.filing1.MinimumWidth = 6;
+            this.filing1.Name = "filing1";
+            this.filing1.ReadOnly = true;
+            this.filing1.Width = 125;
+            // 
+            // security1
+            // 
+            this.security1.HeaderText = "Security";
+            this.security1.MinimumWidth = 6;
+            this.security1.Name = "security1";
+            this.security1.ReadOnly = true;
+            this.security1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.security1.Width = 125;
             // 
             // addfiling1
             // 
-            this.addfiling1.Location = new System.Drawing.Point(1020, 18);
-            this.addfiling1.Margin = new System.Windows.Forms.Padding(4);
+            this.addfiling1.Location = new System.Drawing.Point(765, 15);
             this.addfiling1.Name = "addfiling1";
-            this.addfiling1.Size = new System.Drawing.Size(100, 28);
+            this.addfiling1.Size = new System.Drawing.Size(75, 23);
             this.addfiling1.TabIndex = 3;
             this.addfiling1.Text = "Add";
             this.addfiling1.UseVisualStyleBackColor = true;
@@ -321,20 +324,18 @@
             // filingsecurity1
             // 
             this.filingsecurity1.FormattingEnabled = true;
-            this.filingsecurity1.Location = new System.Drawing.Point(597, 21);
-            this.filingsecurity1.Margin = new System.Windows.Forms.Padding(4);
+            this.filingsecurity1.Location = new System.Drawing.Point(448, 17);
             this.filingsecurity1.Name = "filingsecurity1";
-            this.filingsecurity1.Size = new System.Drawing.Size(415, 24);
+            this.filingsecurity1.Size = new System.Drawing.Size(312, 21);
             this.filingsecurity1.TabIndex = 1;
             this.filingsecurity1.Click += new System.EventHandler(this.filingsecurity1_Click);
             // 
             // filingcode1
             // 
             this.filingcode1.FormattingEnabled = true;
-            this.filingcode1.Location = new System.Drawing.Point(8, 21);
-            this.filingcode1.Margin = new System.Windows.Forms.Padding(4);
+            this.filingcode1.Location = new System.Drawing.Point(6, 17);
             this.filingcode1.Name = "filingcode1";
-            this.filingcode1.Size = new System.Drawing.Size(532, 24);
+            this.filingcode1.Size = new System.Drawing.Size(400, 21);
             this.filingcode1.TabIndex = 0;
             this.filingcode1.SelectedIndexChanged += new System.EventHandler(this.filingcode1_SelectedIndexChanged);
             this.filingcode1.Click += new System.EventHandler(this.filingcode1_Click);
@@ -344,21 +345,18 @@
             this.groupBox1.Controls.Add(this.addcaseparty1);
             this.groupBox1.Controls.Add(this.casepartytype1);
             this.groupBox1.Controls.Add(this.caseparties1);
-            this.groupBox1.Location = new System.Drawing.Point(8, 241);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(6, 196);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1509, 197);
+            this.groupBox1.Size = new System.Drawing.Size(1132, 160);
             this.groupBox1.TabIndex = 64;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Case Parties";
             // 
             // addcaseparty1
             // 
-            this.addcaseparty1.Location = new System.Drawing.Point(412, 22);
-            this.addcaseparty1.Margin = new System.Windows.Forms.Padding(4);
+            this.addcaseparty1.Location = new System.Drawing.Point(309, 18);
             this.addcaseparty1.Name = "addcaseparty1";
-            this.addcaseparty1.Size = new System.Drawing.Size(129, 28);
+            this.addcaseparty1.Size = new System.Drawing.Size(97, 23);
             this.addcaseparty1.TabIndex = 2;
             this.addcaseparty1.Text = "Add";
             this.addcaseparty1.UseVisualStyleBackColor = true;
@@ -367,10 +365,9 @@
             // casepartytype1
             // 
             this.casepartytype1.FormattingEnabled = true;
-            this.casepartytype1.Location = new System.Drawing.Point(9, 25);
-            this.casepartytype1.Margin = new System.Windows.Forms.Padding(4);
+            this.casepartytype1.Location = new System.Drawing.Point(7, 20);
             this.casepartytype1.Name = "casepartytype1";
-            this.casepartytype1.Size = new System.Drawing.Size(393, 24);
+            this.casepartytype1.Size = new System.Drawing.Size(296, 21);
             this.casepartytype1.TabIndex = 1;
             this.casepartytype1.Click += new System.EventHandler(this.casepartytype1_Click);
             // 
@@ -382,6 +379,7 @@
             this.caseparties1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.caseparties1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.caseparties1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnRemoveCaseParty,
             this.partytype1,
             this.firtname,
             this.middlename,
@@ -392,122 +390,21 @@
             this.state,
             this.zip,
             this.relatedAttorney,
-            this.associatedAttorney,
-            this.btnRemoveCaseParty});
-            this.caseparties1.Location = new System.Drawing.Point(8, 60);
-            this.caseparties1.Margin = new System.Windows.Forms.Padding(4);
+            this.associatedAttorney});
+            this.caseparties1.Location = new System.Drawing.Point(6, 49);
             this.caseparties1.Name = "caseparties1";
             this.caseparties1.RowHeadersVisible = false;
             this.caseparties1.RowHeadersWidth = 51;
-            this.caseparties1.Size = new System.Drawing.Size(1493, 122);
+            this.caseparties1.Size = new System.Drawing.Size(1120, 99);
             this.caseparties1.TabIndex = 0;
             this.caseparties1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.caseparties1_CellClick);
-            // 
-            // partytype1
-            // 
-            this.partytype1.HeaderText = "Party Type";
-            this.partytype1.MinimumWidth = 150;
-            this.partytype1.Name = "partytype1";
-            this.partytype1.ReadOnly = true;
-            this.partytype1.Width = 150;
-            // 
-            // firtname
-            // 
-            this.firtname.HeaderText = "First Name";
-            this.firtname.MinimumWidth = 150;
-            this.firtname.Name = "firtname";
-            this.firtname.ReadOnly = true;
-            this.firtname.Width = 150;
-            // 
-            // middlename
-            // 
-            this.middlename.HeaderText = "Middle Name";
-            this.middlename.MinimumWidth = 150;
-            this.middlename.Name = "middlename";
-            this.middlename.ReadOnly = true;
-            this.middlename.Width = 150;
-            // 
-            // lastname
-            // 
-            this.lastname.HeaderText = "Last Name";
-            this.lastname.MinimumWidth = 150;
-            this.lastname.Name = "lastname";
-            this.lastname.ReadOnly = true;
-            this.lastname.Width = 150;
-            // 
-            // emailAddress
-            // 
-            this.emailAddress.HeaderText = "Email";
-            this.emailAddress.MinimumWidth = 6;
-            this.emailAddress.Name = "emailAddress";
-            this.emailAddress.Width = 71;
-            // 
-            // address1
-            // 
-            this.address1.HeaderText = "Address1";
-            this.address1.MinimumWidth = 150;
-            this.address1.Name = "address1";
-            this.address1.ReadOnly = true;
-            this.address1.Width = 150;
-            // 
-            // city
-            // 
-            this.city.HeaderText = "City";
-            this.city.MinimumWidth = 6;
-            this.city.Name = "city";
-            this.city.ReadOnly = true;
-            this.city.Width = 60;
-            // 
-            // state
-            // 
-            this.state.HeaderText = "State";
-            this.state.MinimumWidth = 6;
-            this.state.Name = "state";
-            this.state.ReadOnly = true;
-            this.state.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.state.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.state.Width = 70;
-            // 
-            // zip
-            // 
-            this.zip.HeaderText = "Zip";
-            this.zip.MinimumWidth = 6;
-            this.zip.Name = "zip";
-            this.zip.ReadOnly = true;
-            this.zip.Width = 57;
-            // 
-            // relatedAttorney
-            // 
-            this.relatedAttorney.HeaderText = "Related Attorney";
-            this.relatedAttorney.MinimumWidth = 135;
-            this.relatedAttorney.Name = "relatedAttorney";
-            this.relatedAttorney.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.relatedAttorney.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.relatedAttorney.Width = 135;
-            // 
-            // associatedAttorney
-            // 
-            this.associatedAttorney.HeaderText = "Associated Attorney";
-            this.associatedAttorney.MinimumWidth = 150;
-            this.associatedAttorney.Name = "associatedAttorney";
-            this.associatedAttorney.Width = 150;
-            // 
-            // btnRemoveCaseParty
-            // 
-            this.btnRemoveCaseParty.FillWeight = 90F;
-            this.btnRemoveCaseParty.HeaderText = "Action";
-            this.btnRemoveCaseParty.MinimumWidth = 75;
-            this.btnRemoveCaseParty.Name = "btnRemoveCaseParty";
-            this.btnRemoveCaseParty.Text = "Remove";
-            this.btnRemoveCaseParty.Width = 75;
             // 
             // paymentaccount1
             // 
             this.paymentaccount1.FormattingEnabled = true;
-            this.paymentaccount1.Location = new System.Drawing.Point(605, 127);
-            this.paymentaccount1.Margin = new System.Windows.Forms.Padding(4);
+            this.paymentaccount1.Location = new System.Drawing.Point(454, 103);
             this.paymentaccount1.Name = "paymentaccount1";
-            this.paymentaccount1.Size = new System.Drawing.Size(540, 24);
+            this.paymentaccount1.Size = new System.Drawing.Size(406, 21);
             this.paymentaccount1.TabIndex = 63;
             this.paymentaccount1.SelectedIndexChanged += new System.EventHandler(this.paymentaccount1_SelectedIndexChanged);
             this.paymentaccount1.Click += new System.EventHandler(this.paymentaccount1_Click);
@@ -515,10 +412,9 @@
             // filertype1
             // 
             this.filertype1.FormattingEnabled = true;
-            this.filertype1.Location = new System.Drawing.Point(605, 94);
-            this.filertype1.Margin = new System.Windows.Forms.Padding(4);
+            this.filertype1.Location = new System.Drawing.Point(454, 76);
             this.filertype1.Name = "filertype1";
-            this.filertype1.Size = new System.Drawing.Size(540, 24);
+            this.filertype1.Size = new System.Drawing.Size(406, 21);
             this.filertype1.TabIndex = 62;
             this.filertype1.SelectedIndexChanged += new System.EventHandler(this.filertype1_SelectedIndexChanged);
             this.filertype1.Click += new System.EventHandler(this.filertype1_Click);
@@ -526,10 +422,9 @@
             // filingattorney1
             // 
             this.filingattorney1.FormattingEnabled = true;
-            this.filingattorney1.Location = new System.Drawing.Point(605, 59);
-            this.filingattorney1.Margin = new System.Windows.Forms.Padding(4);
+            this.filingattorney1.Location = new System.Drawing.Point(454, 48);
             this.filingattorney1.Name = "filingattorney1";
-            this.filingattorney1.Size = new System.Drawing.Size(540, 24);
+            this.filingattorney1.Size = new System.Drawing.Size(406, 21);
             this.filingattorney1.TabIndex = 61;
             this.filingattorney1.SelectedIndexChanged += new System.EventHandler(this.filingattorney1_SelectedIndexChanged);
             this.filingattorney1.Click += new System.EventHandler(this.filingattorney1_Click);
@@ -537,10 +432,9 @@
             // damageamount1
             // 
             this.damageamount1.FormattingEnabled = true;
-            this.damageamount1.Location = new System.Drawing.Point(8, 197);
-            this.damageamount1.Margin = new System.Windows.Forms.Padding(4);
+            this.damageamount1.Location = new System.Drawing.Point(6, 160);
             this.damageamount1.Name = "damageamount1";
-            this.damageamount1.Size = new System.Drawing.Size(540, 24);
+            this.damageamount1.Size = new System.Drawing.Size(406, 21);
             this.damageamount1.TabIndex = 60;
             this.damageamount1.SelectedIndexChanged += new System.EventHandler(this.damageamount1_SelectedIndexChanged);
             this.damageamount1.Click += new System.EventHandler(this.damageamount1_Click);
@@ -548,10 +442,9 @@
             // remedy1
             // 
             this.remedy1.FormattingEnabled = true;
-            this.remedy1.Location = new System.Drawing.Point(8, 162);
-            this.remedy1.Margin = new System.Windows.Forms.Padding(4);
+            this.remedy1.Location = new System.Drawing.Point(6, 132);
             this.remedy1.Name = "remedy1";
-            this.remedy1.Size = new System.Drawing.Size(540, 24);
+            this.remedy1.Size = new System.Drawing.Size(406, 21);
             this.remedy1.TabIndex = 59;
             this.remedy1.SelectedIndexChanged += new System.EventHandler(this.remedy1_SelectedIndexChanged);
             this.remedy1.Click += new System.EventHandler(this.remedy1_Click);
@@ -559,10 +452,9 @@
             // casetype1
             // 
             this.casetype1.FormattingEnabled = true;
-            this.casetype1.Location = new System.Drawing.Point(8, 128);
-            this.casetype1.Margin = new System.Windows.Forms.Padding(4);
+            this.casetype1.Location = new System.Drawing.Point(6, 104);
             this.casetype1.Name = "casetype1";
-            this.casetype1.Size = new System.Drawing.Size(540, 24);
+            this.casetype1.Size = new System.Drawing.Size(406, 21);
             this.casetype1.TabIndex = 58;
             this.casetype1.SelectedIndexChanged += new System.EventHandler(this.casetype1_SelectedIndexChanged);
             this.casetype1.Click += new System.EventHandler(this.casetype1_Click);
@@ -570,10 +462,9 @@
             // casecategory1
             // 
             this.casecategory1.FormattingEnabled = true;
-            this.casecategory1.Location = new System.Drawing.Point(8, 94);
-            this.casecategory1.Margin = new System.Windows.Forms.Padding(4);
+            this.casecategory1.Location = new System.Drawing.Point(6, 76);
             this.casecategory1.Name = "casecategory1";
-            this.casecategory1.Size = new System.Drawing.Size(540, 24);
+            this.casecategory1.Size = new System.Drawing.Size(406, 21);
             this.casecategory1.TabIndex = 57;
             this.casecategory1.SelectedIndexChanged += new System.EventHandler(this.casecategory1_SelectedIndexChanged);
             this.casecategory1.Click += new System.EventHandler(this.casecategory1_Click);
@@ -581,10 +472,9 @@
             // jurisdiction1
             // 
             this.jurisdiction1.FormattingEnabled = true;
-            this.jurisdiction1.Location = new System.Drawing.Point(8, 59);
-            this.jurisdiction1.Margin = new System.Windows.Forms.Padding(4);
+            this.jurisdiction1.Location = new System.Drawing.Point(6, 48);
             this.jurisdiction1.Name = "jurisdiction1";
-            this.jurisdiction1.Size = new System.Drawing.Size(540, 24);
+            this.jurisdiction1.Size = new System.Drawing.Size(406, 21);
             this.jurisdiction1.TabIndex = 56;
             this.jurisdiction1.SelectedIndexChanged += new System.EventHandler(this.jurisdiction1_SelectedIndexChanged);
             this.jurisdiction1.Click += new System.EventHandler(this.jurisdiction1_Click);
@@ -597,11 +487,10 @@
             this.tabPage4.Controls.Add(this.btnAddNewParty);
             this.tabPage4.Controls.Add(this.casepartytype);
             this.tabPage4.Controls.Add(this.caseparties);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(1528, 900);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Size = new System.Drawing.Size(1144, 729);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Case Parties";
             // 
@@ -612,8 +501,8 @@
             this.btnRemoveSelected.DrawShadows = true;
             this.btnRemoveSelected.HighEmphasis = true;
             this.btnRemoveSelected.Icon = null;
-            this.btnRemoveSelected.Location = new System.Drawing.Point(1035, 25);
-            this.btnRemoveSelected.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnRemoveSelected.Location = new System.Drawing.Point(776, 20);
+            this.btnRemoveSelected.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRemoveSelected.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRemoveSelected.Name = "btnRemoveSelected";
             this.btnRemoveSelected.Size = new System.Drawing.Size(217, 36);
@@ -631,8 +520,8 @@
             this.btnEditParty.DrawShadows = true;
             this.btnEditParty.HighEmphasis = true;
             this.btnEditParty.Icon = null;
-            this.btnEditParty.Location = new System.Drawing.Point(1335, 26);
-            this.btnEditParty.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnEditParty.Location = new System.Drawing.Point(1001, 21);
+            this.btnEditParty.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEditParty.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEditParty.Name = "btnEditParty";
             this.btnEditParty.Size = new System.Drawing.Size(188, 36);
@@ -650,8 +539,8 @@
             this.btnAddNewParty.DrawShadows = true;
             this.btnAddNewParty.HighEmphasis = true;
             this.btnAddNewParty.Icon = null;
-            this.btnAddNewParty.Location = new System.Drawing.Point(459, 25);
-            this.btnAddNewParty.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnAddNewParty.Location = new System.Drawing.Point(344, 20);
+            this.btnAddNewParty.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAddNewParty.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAddNewParty.Name = "btnAddNewParty";
             this.btnAddNewParty.Size = new System.Drawing.Size(143, 36);
@@ -676,12 +565,11 @@
             this.casepartytype.FormattingEnabled = true;
             this.casepartytype.IntegralHeight = false;
             this.casepartytype.ItemHeight = 29;
-            this.casepartytype.Location = new System.Drawing.Point(27, 26);
-            this.casepartytype.Margin = new System.Windows.Forms.Padding(4);
+            this.casepartytype.Location = new System.Drawing.Point(20, 21);
             this.casepartytype.MaxDropDownItems = 4;
             this.casepartytype.MouseState = MaterialSkin.MouseState.OUT;
             this.casepartytype.Name = "casepartytype";
-            this.casepartytype.Size = new System.Drawing.Size(421, 35);
+            this.casepartytype.Size = new System.Drawing.Size(317, 35);
             this.casepartytype.TabIndex = 22;
             this.casepartytype.UseTallSize = false;
             // 
@@ -703,15 +591,14 @@
             this.caseparties.Font = new System.Drawing.Font("Microsoft Sans Serif", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.caseparties.FullRowSelect = true;
             this.caseparties.HideSelection = false;
-            this.caseparties.Location = new System.Drawing.Point(27, 94);
-            this.caseparties.Margin = new System.Windows.Forms.Padding(4);
-            this.caseparties.MinimumSize = new System.Drawing.Size(267, 123);
+            this.caseparties.Location = new System.Drawing.Point(20, 76);
+            this.caseparties.MinimumSize = new System.Drawing.Size(200, 100);
             this.caseparties.MouseLocation = new System.Drawing.Point(-1, -1);
             this.caseparties.MouseState = MaterialSkin.MouseState.OUT;
             this.caseparties.MultiSelect = false;
             this.caseparties.Name = "caseparties";
             this.caseparties.OwnerDraw = true;
-            this.caseparties.Size = new System.Drawing.Size(1575, 604);
+            this.caseparties.Size = new System.Drawing.Size(1181, 491);
             this.caseparties.TabIndex = 21;
             this.caseparties.UseCompatibleStateImageBehavior = false;
             this.caseparties.View = System.Windows.Forms.View.Details;
@@ -767,11 +654,10 @@
             this.tabPage5.Controls.Add(this.lvFilings);
             this.tabPage5.Controls.Add(this.btnAddNewFiling);
             this.tabPage5.Controls.Add(this.label15);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(1528, 900);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage5.Size = new System.Drawing.Size(1144, 729);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Filings";
             // 
@@ -783,8 +669,8 @@
             this.btnRemove.DrawShadows = true;
             this.btnRemove.HighEmphasis = true;
             this.btnRemove.Icon = null;
-            this.btnRemove.Location = new System.Drawing.Point(1205, 702);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnRemove.Location = new System.Drawing.Point(904, 570);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRemove.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(216, 36);
@@ -810,15 +696,14 @@
             this.lvFilings.Font = new System.Drawing.Font("Microsoft Sans Serif", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lvFilings.FullRowSelect = true;
             this.lvFilings.HideSelection = false;
-            this.lvFilings.Location = new System.Drawing.Point(24, 37);
-            this.lvFilings.Margin = new System.Windows.Forms.Padding(4);
-            this.lvFilings.MinimumSize = new System.Drawing.Size(267, 123);
+            this.lvFilings.Location = new System.Drawing.Point(18, 30);
+            this.lvFilings.MinimumSize = new System.Drawing.Size(200, 100);
             this.lvFilings.MouseLocation = new System.Drawing.Point(-1, -1);
             this.lvFilings.MouseState = MaterialSkin.MouseState.OUT;
             this.lvFilings.MultiSelect = false;
             this.lvFilings.Name = "lvFilings";
             this.lvFilings.OwnerDraw = true;
-            this.lvFilings.Size = new System.Drawing.Size(1668, 628);
+            this.lvFilings.Size = new System.Drawing.Size(1251, 510);
             this.lvFilings.TabIndex = 57;
             this.lvFilings.UseCompatibleStateImageBehavior = false;
             this.lvFilings.View = System.Windows.Forms.View.Details;
@@ -856,8 +741,8 @@
             this.btnAddNewFiling.DrawShadows = true;
             this.btnAddNewFiling.HighEmphasis = true;
             this.btnAddNewFiling.Icon = null;
-            this.btnAddNewFiling.Location = new System.Drawing.Point(1504, 702);
-            this.btnAddNewFiling.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnAddNewFiling.Location = new System.Drawing.Point(1128, 570);
+            this.btnAddNewFiling.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAddNewFiling.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAddNewFiling.Name = "btnAddNewFiling";
             this.btnAddNewFiling.Size = new System.Drawing.Size(141, 36);
@@ -871,21 +756,19 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(20, 17);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(15, 14);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(97, 17);
+            this.label15.Size = new System.Drawing.Size(73, 13);
             this.label15.TabIndex = 20;
             this.label15.Text = "Added Filings:";
             // 
             // tpServiceContacts
             // 
             this.tpServiceContacts.Controls.Add(this.lbServiceContacts);
-            this.tpServiceContacts.Location = new System.Drawing.Point(4, 25);
-            this.tpServiceContacts.Margin = new System.Windows.Forms.Padding(4);
+            this.tpServiceContacts.Location = new System.Drawing.Point(4, 22);
             this.tpServiceContacts.Name = "tpServiceContacts";
-            this.tpServiceContacts.Padding = new System.Windows.Forms.Padding(4);
-            this.tpServiceContacts.Size = new System.Drawing.Size(1528, 900);
+            this.tpServiceContacts.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpServiceContacts.Size = new System.Drawing.Size(1144, 729);
             this.tpServiceContacts.TabIndex = 3;
             this.tpServiceContacts.Text = "Service Contacts";
             this.tpServiceContacts.UseVisualStyleBackColor = true;
@@ -893,22 +776,19 @@
             // lbServiceContacts
             // 
             this.lbServiceContacts.FormattingEnabled = true;
-            this.lbServiceContacts.ItemHeight = 16;
-            this.lbServiceContacts.Location = new System.Drawing.Point(21, 58);
-            this.lbServiceContacts.Margin = new System.Windows.Forms.Padding(4);
+            this.lbServiceContacts.Location = new System.Drawing.Point(16, 47);
             this.lbServiceContacts.Name = "lbServiceContacts";
-            this.lbServiceContacts.Size = new System.Drawing.Size(1268, 148);
+            this.lbServiceContacts.Size = new System.Drawing.Size(952, 121);
             this.lbServiceContacts.TabIndex = 0;
             // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.gbAmount);
             this.tabPage7.Controls.Add(this.gbCrossReference);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage7.Size = new System.Drawing.Size(1528, 900);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage7.Size = new System.Drawing.Size(1144, 729);
             this.tabPage7.TabIndex = 4;
             this.tabPage7.Text = "Misc";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -917,30 +797,26 @@
             // 
             this.gbAmount.Controls.Add(this.textBox3);
             this.gbAmount.Controls.Add(this.label21);
-            this.gbAmount.Location = new System.Drawing.Point(31, 7);
-            this.gbAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.gbAmount.Location = new System.Drawing.Point(23, 6);
             this.gbAmount.Name = "gbAmount";
-            this.gbAmount.Padding = new System.Windows.Forms.Padding(4);
-            this.gbAmount.Size = new System.Drawing.Size(1261, 80);
+            this.gbAmount.Size = new System.Drawing.Size(946, 65);
             this.gbAmount.TabIndex = 6;
             this.gbAmount.TabStop = false;
             this.gbAmount.Text = "Amount";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(253, 36);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Location = new System.Drawing.Point(190, 29);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(387, 22);
+            this.textBox3.Size = new System.Drawing.Size(291, 20);
             this.textBox3.TabIndex = 1;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(23, 39);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(17, 32);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(151, 17);
+            this.label21.Size = new System.Drawing.Size(113, 13);
             this.label21.TabIndex = 0;
             this.label21.Text = "Amount in Controversy";
             // 
@@ -952,11 +828,9 @@
             this.gbCrossReference.Controls.Add(this.textBox4);
             this.gbCrossReference.Controls.Add(this.label22);
             this.gbCrossReference.Controls.Add(this.comboBox2);
-            this.gbCrossReference.Location = new System.Drawing.Point(31, 87);
-            this.gbCrossReference.Margin = new System.Windows.Forms.Padding(4);
+            this.gbCrossReference.Location = new System.Drawing.Point(23, 71);
             this.gbCrossReference.Name = "gbCrossReference";
-            this.gbCrossReference.Padding = new System.Windows.Forms.Padding(4);
-            this.gbCrossReference.Size = new System.Drawing.Size(1261, 217);
+            this.gbCrossReference.Size = new System.Drawing.Size(946, 176);
             this.gbCrossReference.TabIndex = 2;
             this.gbCrossReference.TabStop = false;
             this.gbCrossReference.Text = "Cross Reference";
@@ -964,82 +838,156 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(253, 148);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox6.Location = new System.Drawing.Point(190, 120);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(387, 22);
+            this.textBox6.Size = new System.Drawing.Size(291, 20);
             this.textBox6.TabIndex = 5;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(253, 113);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox5.Location = new System.Drawing.Point(190, 92);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(387, 22);
+            this.textBox5.Size = new System.Drawing.Size(291, 20);
             this.textBox5.TabIndex = 4;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(28, 82);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(21, 67);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(168, 17);
+            this.label23.Size = new System.Drawing.Size(126, 13);
             this.label23.TabIndex = 3;
             this.label23.Text = "Cross Reference Number";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(253, 79);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Location = new System.Drawing.Point(190, 64);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(387, 22);
+            this.textBox4.Size = new System.Drawing.Size(291, 20);
             this.textBox4.TabIndex = 2;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(49, 30);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(37, 24);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(150, 17);
+            this.label22.Size = new System.Drawing.Size(113, 13);
             this.label22.TabIndex = 1;
             this.label22.Text = "Cross Reference Type";
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(253, 26);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox2.Location = new System.Drawing.Point(190, 21);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(387, 24);
+            this.comboBox2.Size = new System.Drawing.Size(291, 21);
             this.comboBox2.TabIndex = 0;
             // 
-            // filing1
+            // btnRemoveCaseParty
             // 
-            this.filing1.HeaderText = "Filing";
-            this.filing1.MinimumWidth = 6;
-            this.filing1.Name = "filing1";
-            this.filing1.ReadOnly = true;
-            this.filing1.Width = 125;
+            this.btnRemoveCaseParty.FillWeight = 90F;
+            this.btnRemoveCaseParty.HeaderText = "Action";
+            this.btnRemoveCaseParty.MinimumWidth = 75;
+            this.btnRemoveCaseParty.Name = "btnRemoveCaseParty";
+            this.btnRemoveCaseParty.Text = "Remove";
+            this.btnRemoveCaseParty.Width = 75;
             // 
-            // security1
+            // partytype1
             // 
-            this.security1.HeaderText = "Security";
-            this.security1.MinimumWidth = 6;
-            this.security1.Name = "security1";
-            this.security1.ReadOnly = true;
-            this.security1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.security1.Width = 125;
+            this.partytype1.HeaderText = "Party Type";
+            this.partytype1.MinimumWidth = 150;
+            this.partytype1.Name = "partytype1";
+            this.partytype1.ReadOnly = true;
+            this.partytype1.Width = 150;
+            // 
+            // firtname
+            // 
+            this.firtname.HeaderText = "First Name";
+            this.firtname.MinimumWidth = 150;
+            this.firtname.Name = "firtname";
+            this.firtname.ReadOnly = true;
+            this.firtname.Width = 150;
+            // 
+            // middlename
+            // 
+            this.middlename.HeaderText = "Middle Name";
+            this.middlename.MinimumWidth = 150;
+            this.middlename.Name = "middlename";
+            this.middlename.ReadOnly = true;
+            this.middlename.Width = 150;
+            // 
+            // lastname
+            // 
+            this.lastname.HeaderText = "Last Name";
+            this.lastname.MinimumWidth = 150;
+            this.lastname.Name = "lastname";
+            this.lastname.ReadOnly = true;
+            this.lastname.Width = 150;
+            // 
+            // emailAddress
+            // 
+            this.emailAddress.HeaderText = "Email";
+            this.emailAddress.MinimumWidth = 6;
+            this.emailAddress.Name = "emailAddress";
+            this.emailAddress.Width = 57;
+            // 
+            // address1
+            // 
+            this.address1.HeaderText = "Address1";
+            this.address1.MinimumWidth = 150;
+            this.address1.Name = "address1";
+            this.address1.ReadOnly = true;
+            this.address1.Width = 150;
+            // 
+            // city
+            // 
+            this.city.HeaderText = "City";
+            this.city.MinimumWidth = 6;
+            this.city.Name = "city";
+            this.city.ReadOnly = true;
+            this.city.Width = 49;
+            // 
+            // state
+            // 
+            this.state.HeaderText = "State";
+            this.state.MinimumWidth = 6;
+            this.state.Name = "state";
+            this.state.ReadOnly = true;
+            this.state.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.state.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.state.Width = 57;
+            // 
+            // zip
+            // 
+            this.zip.HeaderText = "Zip";
+            this.zip.MinimumWidth = 6;
+            this.zip.Name = "zip";
+            this.zip.ReadOnly = true;
+            this.zip.Width = 47;
+            // 
+            // relatedAttorney
+            // 
+            this.relatedAttorney.HeaderText = "Related Attorney";
+            this.relatedAttorney.MinimumWidth = 135;
+            this.relatedAttorney.Name = "relatedAttorney";
+            this.relatedAttorney.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.relatedAttorney.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.relatedAttorney.Width = 135;
+            // 
+            // associatedAttorney
+            // 
+            this.associatedAttorney.HeaderText = "Associated Attorney";
+            this.associatedAttorney.MinimumWidth = 150;
+            this.associatedAttorney.Name = "associatedAttorney";
+            this.associatedAttorney.Width = 150;
             // 
             // frmCodeGenarator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1576, 959);
+            this.ClientSize = new System.Drawing.Size(1182, 779);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(394, 235);
+            this.MinimumSize = new System.Drawing.Size(300, 198);
             this.Name = "frmCodeGenarator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Template Generator";
@@ -1135,6 +1083,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn filler1;
         private System.Windows.Forms.DataGridView filings1;
         private System.Windows.Forms.DataGridView caseparties1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filing1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn security1;
+        private System.Windows.Forms.DataGridViewButtonColumn btnRemoveCaseParty;
         private System.Windows.Forms.DataGridViewTextBoxColumn partytype1;
         private System.Windows.Forms.DataGridViewTextBoxColumn firtname;
         private System.Windows.Forms.DataGridViewTextBoxColumn middlename;
@@ -1146,8 +1097,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn zip;
         private System.Windows.Forms.DataGridViewComboBoxColumn relatedAttorney;
         private System.Windows.Forms.DataGridViewTextBoxColumn associatedAttorney;
-        private System.Windows.Forms.DataGridViewButtonColumn btnRemoveCaseParty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn filing1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn security1;
     }
 }
