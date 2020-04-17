@@ -160,6 +160,7 @@ namespace EFileApp
 
             reloadCasePartyTable();
             reloadFilingsTable();
+            reloadServiceContactsTable();
         }
 
         //----------------------------------------------------------------------------------------------------
@@ -703,14 +704,16 @@ namespace EFileApp
             filings1.Rows.Clear();
             JObject data = (JObject)payload.GetValue("data");
             JArray service_contacts = (JArray)data.GetValue("service_contacts");
-            foreach (JObject service_contact in service_contacts)
+            if (service_contacts != null)
             {
-                servicecontact1.Rows.Add(new[] {
+                foreach (JObject service_contact in service_contacts)
+                {
+                    servicecontact1.Rows.Add(new[] {
                     service_contact.GetValue("email")
                 });
+                }
             }
         }
-
 
         //----------------------------------------------------------------------------------------------------
         //Filing code
