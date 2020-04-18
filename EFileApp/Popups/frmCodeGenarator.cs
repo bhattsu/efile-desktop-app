@@ -96,15 +96,16 @@ namespace EFileApp
 
         public void removeJSONNode(string root, string key, string value)
         {
-           if (root == "case_parties")
+            if (root == "case_parties")
             {
                 JObject data = (JObject)payload.GetValue("data");
                 JArray case_parties = (JArray)data.GetValue("case_parties");
-                foreach(JObject case_party in case_parties)
+                foreach (JObject case_party in case_parties)
                 {
                     if ((string)case_party.GetValue("id") == value)
                     {
                         case_parties.Remove(case_party);
+                        break;
                     }
                 }
             }
@@ -180,7 +181,9 @@ namespace EFileApp
         }
 
         //----------------------------------------------------------------------------------------------------
-        
+
+        private dynamic RelatedAttorneys;
+        private dynamic Security;
         public void loadComboData(dynamic config, string api)
         {
             ComboBox combobox = config.component;
@@ -220,10 +223,54 @@ namespace EFileApp
                         eitem = new { name = idisplay, code = icode };
                         combobox.Items.Add(eitem);
                     }
-
                 }
+                RelatedAttorneys = codes["items"];
+                Security = codes["items"];
             }
         }
+        //public void loadComboData(dynamic config, string api)
+        //{
+        //    ComboBox combobox = config.component;
+        //    combobox.DisplayMember = "name";
+        //    combobox.ValueMember = "code";
+
+        //    string existingcode = getJSONValue("data", config.code);
+        //    string existingdisplay = getJSONValue("data", config.display);
+
+        //    dynamic eitem = new { name = existingdisplay, code = existingcode };
+
+        //    if (api == null)
+        //    {
+        //        if (existingcode != null && existingcode.Length != 0)
+        //        {
+        //            combobox.Items.Add(eitem);
+        //            combobox.SelectedItem = eitem;
+        //        }
+        //    }
+        //    else
+        //    {
+
+        //        dynamic codes = AppConstants.ApiCaller.get(api);
+        //        foreach (var item in codes["items"])
+        //        {
+        //            string icode = item[config.combovalue];
+        //            string idisplay = item[config.combodisplay];
+
+        //            eitem = new { name = idisplay, code = icode };
+
+        //            if (icode == existingcode)
+        //            {
+        //                continue;
+        //            }
+        //            else
+        //            {
+        //                eitem = new { name = idisplay, code = icode };
+        //                combobox.Items.Add(eitem);
+        //            }
+
+        //        }
+        //    }
+        //}
 
         //----------------------------------------------------------------------------------------------------
         public void selectComboItem(ComboBox combobox, dynamic eitem)
@@ -448,7 +495,7 @@ namespace EFileApp
         {
             indexChange("procedure_remedy");
         }
-         
+
         //----------------------------------------------------------------------------------------------------
         //Damage Amount
         //----------------------------------------------------------------------------------------------------
@@ -553,7 +600,7 @@ namespace EFileApp
 
         private void addcaseparty1_Click(object sender, EventArgs e)
         {
-            
+
             dynamic item = casepartytype1.SelectedItem;
             if (item != null)
             {
@@ -580,35 +627,66 @@ namespace EFileApp
             case_parties.Add(caseparty);
         }
 
-
         public void reloadCasePartyTable()
         {
-            int index = 0;
             caseparties1.Rows.Clear();
             JObject data = (JObject)payload.GetValue("data");
             JArray case_parties = (JArray)data.GetValue("case_parties");
             foreach (JObject case_party in case_parties)
             { 
-
                 caseparties1.Rows.Add(new[] {
-                    "Remove",
-                    case_party.GetValue("type_display"),
-                    case_party.GetValue("first_name"),
-                    case_party.GetValue("middle_name"),
-                    case_party.GetValue("last_name")
-                });;
+                        "Remove",
+                        case_party.GetValue("id"),
+                        case_party.GetValue("type_display"),
+                        case_party.GetValue("first_name"),
+                        case_party.GetValue("middle_name"),
+                        case_party.GetValue("last_name")
+                        }); 
+                caseparties1.Columns[1].Visible = false;
+            }
+            dynamic config = configs["filing_attorney"];
+            config.isloaded = false;
+            //config.component = relatedAttorney;
+            loadData("filing_attorney", false);
+            relatedAttorney.Items.Clear();
+            foreach (var comboboxdata in RelatedAttorneys)
+            {
+                relatedAttorney.Items.Add(comboboxdata["display_name"]);
+            }
 
-           
-                index++;
-                
-            } 
+            state.Items.Add("State 1"); // Should be replaced with Api Data
+            state.Items.Add("State 2"); // Should be replaced with Api Data
+
+
         }
+
+
+        //public void reloadCasePartyTable()
+        //{
+        //    caseparties1.Rows.Clear();
+        //    JObject data = (JObject)payload.GetValue("data");
+        //    JArray case_parties = (JArray)data.GetValue("case_parties");
+        //    foreach (JObject case_party in case_parties)
+        //    { 
+
+        //        caseparties1.Rows.Add(new[] {
+        //            "Remove",
+        //            case_party.GetValue("id"),
+        //            case_party.GetValue("type_display"),
+        //            case_party.GetValue("first_name"),
+        //            case_party.GetValue("middle_name"),
+        //            case_party.GetValue("last_name")
+        //        });
+        //        caseparties1.Columns[1].Visible = false;
+        //    } 
+        //}
 
 
         public int getCellIndexByName(DataGridView dgv, string headerText)
         {
 
-            foreach (DataGridViewColumn column in dgv.Columns) {
+            foreach (DataGridViewColumn column in dgv.Columns)
+            {
                 if (column.HeaderText.Equals(headerText, StringComparison.InvariantCultureIgnoreCase))
                 {
                     return column.Index;
@@ -687,11 +765,17 @@ namespace EFileApp
             foreach (JObject filing in filings)
             {
                 filings1.Rows.Add(new[] {
+                    "Remove",
                     filing.GetValue("code_display"),
                     filing.GetValue("doc_type_display")
                 });
- 
+
                 index++;
+                security1.Items.Clear();
+                foreach (var combodata in Security)
+                {
+                    security1.Items.Add(combodata["name"]);
+                }
             }
         }
 
@@ -737,6 +821,7 @@ namespace EFileApp
                 foreach (JObject service_contact in service_contacts)
                 {
                     servicecontact1.Rows.Add(new[] {
+                    "Remove",
                     service_contact.GetValue("email")
                 });
                 }
@@ -1116,11 +1201,13 @@ namespace EFileApp
 
                 if (caseparties1.CurrentCell.ColumnIndex == cellIndex && e.RowIndex != -1)
                 {
-                    removeJSONNode("case_parties", "id", "1"); //One should be replaced with party id
+                    removeJSONNode("case_parties", "id", caseparties1.CurrentRow.Cells[1].Value.ToString()); //One should be replaced with party id
+                    if (caseparties1.CurrentRow.Cells[1].Value.ToString().StartsWith("Party_"))
+                        caseparties1.Rows.RemoveAt(e.RowIndex);
                     reloadCasePartyTable();
                 }
             }
-            
+
         }
  
     }
